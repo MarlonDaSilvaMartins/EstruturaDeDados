@@ -1,5 +1,5 @@
 package br.com.estruturadedados.fila;
-//fila
+
 public class Fila {
     private int inicio;
     private int fim;
@@ -45,10 +45,6 @@ public class Fila {
             return true;
         else
             return false;
-    }
-
-    public void metodo(){
-
     }
 
 }//class

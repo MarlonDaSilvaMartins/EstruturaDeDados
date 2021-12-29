@@ -1,0 +1,15 @@
+lista
+pilha
+set
+map
+
+ArrayList
+LinkedList
+
+LinkedHashSet
+HashSet
+TreeSet
+
+HashMap
+LinkedHashMap
+TreeMap

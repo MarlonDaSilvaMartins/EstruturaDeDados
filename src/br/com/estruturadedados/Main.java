@@ -4,7 +4,7 @@ import br.com.estruturadedados.fila.Fila;
 
 public class Main {
     public static void main(String[] args){
-        //filaaaa
+        //fila
         Fila f = new Fila(10);
         for(int i = 0; i < 10;i++){
             f.insere(i);
