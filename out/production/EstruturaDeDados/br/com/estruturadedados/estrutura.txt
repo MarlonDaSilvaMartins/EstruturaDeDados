@@ -1,5 +1,25 @@
-lista
-pilha
+lista  // estrutura de dados do qual um conjunto de dados é acessivel em uma sequencia determinada
+          receber dados do banco, lista de um carinho de compras
+
+fila   // estrutura de dados linear do qual o primeiro resultado a entrar é o primeiro a sair(FIFO)
+          remoção: remove do topo
+          inserção: insere no fim
+          pedidos, sistema de fila, caminhoes esperando pela descarga
+
+pilha  // estrutura de dados em que o acesso é restrito ao elemento mais recente da pilha(LIFO),
+          push: inserir no topo
+          pop: retirar do topo
+          top: observar topo
+          Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
+
+hash   // é uma tabela onde as informalçoes sao armazenadas conforme um numero hash, calculado com base nas proproedades
+          da informação
+
+equals // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
+          propriedades
+
+list
+queue
 set
 map
 
