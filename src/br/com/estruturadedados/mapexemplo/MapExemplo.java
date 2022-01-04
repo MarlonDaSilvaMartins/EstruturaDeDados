@@ -1,20 +1,20 @@
-package br.com.estruturadedados.listexemplo;
+package br.com.estruturadedados.mapexemplo;
 import br.com.estruturadedados.carro.Carro;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.Random;
 
-/* List = (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos no list = +-228ms
- * Busca de um elemento = 27ms O(N)
- * Inserção de um elemento no meio da coleção = 3ms O(1)
- * Inserção no inicio e no final da coleção = 3ms O(1) e 0ms O(1)
- * Remoção de todos elementos da coleção = 4ms O(N)
- * Remoção de um elemento no meio da coleção = 2ms O(N)
+/* Map = (colocar uma breve explicacao aqui)
+ * tempo de insercao de 1 milhao de elementos no list = +-403ms
+ * Busca de um elemento = 20ms O(1)
+ * Inserção de um elemento no meio da coleção = 1ms O(1) //sobreescreveu o valor
+ * Inserção no inicio e no final da coleção = ?ms O(?) e ?ms O(?) // nao tem comeco e fim
+ * Remoção de todos elementos da coleção = 5ms O(n)
+ * Remoção de um elemento no meio da coleção = 0ms O(1)
  * */
 
-public class ListExemplo {
-    private List<Carro> al = new ArrayList<>();
+public class MapExemplo {
+    Map<String, Carro> m = new HashMap<String, Carro>();
 
     private Random g = new Random();
 
@@ -24,7 +24,7 @@ public class ListExemplo {
     private String chassi;
     private int r1, r2;
 
-    public void preencherList(){
+    public void preencherMap(){
         for(int i = 0; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
@@ -44,54 +44,52 @@ public class ListExemplo {
             }else{
                 chassi = ""+(i+1);
             }
-            Carro c = new Carro(marca, modelo[r1], cor[r2],chassi);
+            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi);
 
-            al.add(c);
+            m.put(chassi,c);
         }
     }//preencherList
 
-    public void mostrarList(){
-        System.out.println(al);
+    public void mostrarMap(){
+        System.out.println(m);
     }//mostrarList
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
-        for(Carro valor : al){
-            if(valor.getChassi().equals(c)){
-                resultado = valor;
-            }
-        }
+        resultado = m.get(c);
+
         return resultado;
     }//buscar
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
+        m.put(chassi,c);
 
-        al.add(0,c);
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirMeio(int index, String marca, String modelo, String cor, String chassi){
+    public void inserirMeio(String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
+        m.put(chassi,c);
 
-        al.add(index,c);
         System.out.println("Valor inserido com sucesso!");
     }
 
     public void inserirFim(String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
+        m.put(chassi,c);
 
-        al.add(al.size(),c);
         System.out.println("Valor inserido com sucesso!");
     }
 
     public void removerTudo(){
-        al.clear();
+        m.clear();
         System.out.println("Valores removido com sucesso!");
     }
 
-    public void removerMeio(int index){
-        al.remove(index);
+    public void removerMeio(String chave){
+        m.remove(chave);
         System.out.println("Valor removido com sucesso!");
     }
-}//classe
+
+}

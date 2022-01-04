@@ -51,12 +51,12 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "\nCarro{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", cor='" + cor + '\'' +
-                ", chassi='" + chassi + '\'' +
-                '}';
+        return "Carro{" +
+                "marca='" + marca +
+                "', modelo='" + modelo +
+                "', cor='" + cor +
+                "', chassi='" + chassi +
+                "}\n";
     }
 
     @Override
