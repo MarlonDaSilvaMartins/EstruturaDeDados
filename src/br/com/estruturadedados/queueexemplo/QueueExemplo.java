@@ -3,12 +3,12 @@ import br.com.estruturadedados.carro.Carro;
 import java.util.*;
 
 /* Queue= (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos no list = +-?ms
- * Busca de um elemento = ?ms O(N)
- * Inserção de um elemento no meio da coleção = ?ms O(n)
- * Inserção no inicio e no final da coleção = ?ms O(n) e ?ms O(1)
- * Remoção de todos elementos da coleção = ?ms O(N)
- * Remoção de um elemento no meio da coleção = ?ms O(N)
+ * tempo de insercao de 1 milhao de elementos no list = +-269ms
+ * Busca de um elemento = 194ms O(n)
+ * Inserção de um elemento no meio da coleção = ?ms O(?)
+ * Inserção no inicio e no final da coleção = ?ms O(?) e 1ms O(1)
+ * Remoção de todos elementos da coleção = 5ms O(N)
+ * Remoção de um elemento no meio da coleção = 1ms O(N)
  * */
 
 public class QueueExemplo{
