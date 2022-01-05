@@ -84,7 +84,7 @@ public class ListExemplo {
 
     public void removerTudo(){
         al.clear();
-        System.out.println("Valores removido com sucesso!");
+        System.out.println("Valores removidos com sucesso!");
     }
 
     public void removerMeio(int index){

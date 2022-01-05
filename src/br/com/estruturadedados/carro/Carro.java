@@ -2,7 +2,7 @@ package br.com.estruturadedados.carro;
 
 import java.util.Objects;
 
-public class Carro {
+public class Carro implements Comparable<Carro>{
     private String marca;
     private String modelo;
     private String cor;
@@ -70,5 +70,10 @@ public class Carro {
     @Override
     public int hashCode() {
         return Objects.hash(marca, modelo, cor, chassi);
+    }
+
+    @Override
+    public int compareTo(Carro c) {
+        return this.chassi.compareTo(c.chassi);
     }
 }

@@ -84,7 +84,7 @@ public class MapExemplo {
 
     public void removerTudo(){
         m.clear();
-        System.out.println("Valores removido com sucesso!");
+        System.out.println("Valores removidos com sucesso!");
     }
 
     public void removerMeio(String chave){

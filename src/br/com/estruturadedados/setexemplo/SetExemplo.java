@@ -1,6 +1,5 @@
 package br.com.estruturadedados.setexemplo;
 import br.com.estruturadedados.carro.Carro;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -78,7 +77,7 @@ public class SetExemplo {
     }
 
     public void inserirFim(String marca, String modelo, String cor){
-        chassi = ""+s.size();
+        chassi = ""+(s.size()+1);
         Carro c = new Carro(marca,modelo,cor,chassi);
         s.add(c);
         System.out.println("Valor inserido com sucesso!");
@@ -86,7 +85,7 @@ public class SetExemplo {
 
     public void removerTudo(){
         s.clear();
-        System.out.println("Valores removido com sucesso!");
+        System.out.println("Valores removidos com sucesso!");
     }
 
     public void removerMeio(String c){
