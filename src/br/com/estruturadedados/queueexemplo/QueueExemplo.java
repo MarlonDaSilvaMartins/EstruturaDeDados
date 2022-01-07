@@ -3,7 +3,7 @@ import br.com.estruturadedados.carro.Carro;
 import java.util.*;
 
 /* Queue= (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos no list = +-269ms
+ * tempo de insercao de 1 milhao de elementos = +-269ms
  * Busca de um elemento = 194ms O(n)
  * Inserção de um elemento no meio da coleção = ?ms O(?)
  * Inserção no inicio e no final da coleção = ?ms O(?) e 1ms O(1)

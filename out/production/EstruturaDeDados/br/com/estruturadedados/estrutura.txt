@@ -18,18 +18,49 @@ hash   // é uma tabela onde as informalçoes sao armazenadas conforme um numero
 equals // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
           propriedades
 
-list
-queue
-set
-map
+list //
+queue //
+set //
+map //
 
-ArrayList
-LinkedList
+ArrayList //
+LinkedList //
+ * add(e)      = LinkedList = O(1) | ArrayList = O(n)
+ * add(i, e)   = LinkedList = O(n) | ArrayList = O(n) no pior caso, o array será redimensionado e copiado para um novo array
+ * remove      = LinkedList possui O(n) e ArrayList possui O(n-index) se remover o ultimo ele mento será O(1)
+ * get         = LinkedList = O(n) | ArrayList = O(1)
+ * set         = LinkedList = O(n) | ArrayList = O(n)
+ * duplicado   = Linkedlist = Permite valores duplicados pois cada valor é guardado em um nodo diferente
+                 Arraylist  = Permite valores duplicados pois guarda o objeto da maneira que sao inseridos
+ * tam inicial = Linkedlist = sem tamanho inicial | Arraylist = 10 se nao for especificado outro valor na inicializacao
+ * tam maximo  = Linkedlist = sem limite | Arraylist = sem limite, quando chega no maximo(10) se expande automaticamente dobrando de tamanho
 
-LinkedHashSet
-HashSet
-TreeSet
+LinkedHashSet []//
+HashSet [?]//
+TreeSet []//
+ * add         = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
+ * remove      = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
+ * busca       = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
+ * duplicado   = LinkedHashSet = nao permite | HashSet = nao permite | TreeSet = nao permite
+ * ordenacao   = LinkedHashSet = ordem de inserção
+                 HashSet = nao mantem ordem
+                 TreeSet = ordem ascendente ou ordem do camparador
+ * tam inicial = LinkedHashSet = 16 buckets | HashSet = 16 | TreeSet = 16
+ * tam maximo  = LinkedHashSet = sem limite | HashSet = sem limite* | TreeSet = sem limite
+                 * relativamente ineficiente a partir de 100 milhoes de elemento devido a distribuicao de 32bits do
+                 hashcode que comeca a ficar menos aleatorio e aumentando o numero de colisoes
 
-HashMap
-LinkedHashMap
-TreeMap
+HashMap [?]//
+LinkedHashMap []//
+TreeMap []//
+ * add         = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
+ * remove      = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
+ * busca       = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
+ * duplicado   = LinkedHashMap = nao contem chaves duplicadas
+                 HashMap = nao contem chaves duplicadas
+                 TreeMap = nao contem chaves duplicadas
+ * ordenacao   = LinkedHashMap = ordem de inserção
+                 HashMap = nao mantem ordem
+                 TreeMap = ordem ascendente ou ordem do camparador
+ * tam inicial = LinkedHashMap = 16 | HashMap = 16 | TreeMap = 16
+ * tam maximo  = LinkedHashMap = sem limite | HashMap = sem limite | TreeMap = sem limite

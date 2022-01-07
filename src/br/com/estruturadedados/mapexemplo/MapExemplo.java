@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 /* Map = (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos no list = +-403ms
+ * tempo de insercao de 1 milhao de elementos = +-403ms
  * Busca de um elemento = 20ms O(1)
  * Inserção de um elemento no meio da coleção = 1ms O(1) //sobreescreveu o valor
  * Inserção no inicio e no final da coleção = ?ms O(?) e ?ms O(?) // nao tem comeco e fim
