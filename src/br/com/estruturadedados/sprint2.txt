@@ -1,0 +1,74 @@
+Sprint 02
+	*Estruturas de dados (List, Map, HashMap, set, stack, queue)
+		[x] equals e hashCode
+		[x] Conceitos de Lista, Fila, e Pilha
+	*[x] Implementações e metodos das Interfaces
+		[x] List
+		[x] Queue
+		[x] Set
+		[x] Map
+	*[x] Criar uma coleção com um milhão de elementos para cada estrutura de dados avaliando
+	     avaliando performance de:
+		[x] Busca de um elemento
+		[x] Inserção de um elemento no meio da coleção
+		[x] Inserção no inicio e no final da coleção
+		[x] Remoção de todos elementos da coleção
+		[x] Remoção de um elemento no meio da coleção
+	*[x] Diferenças entre ArrayList e LinkedList
+		[x] performance nos metodos add, remove, get e set
+		[x] elementos duplicados
+		[x] espaço inicial e maximo
+	*[x] Diferenças entre LinkedHashSet, HashSet e TreeSet
+		[x] elementos duplicados
+		[x] performance e ordenação
+		[x] espaço inicial e maximo
+	*[x] Diferenças entre HashMap, LinkedHashMap e TreeMap
+		[x] elementos duplicados
+		[x] performance e ordenação
+		[x] espaço inicial e maximo
+	*[x] Criar exemplos praticos, utilizando metricas para medir o tempo iterações, e inserções nos tipos de
+		 implementações destas interfaces e compara-las.
+		[x] HashSet
+		[x] LinkedHashSet
+		[x] TreeSet
+		[x] HashMap
+		[x] LinkedHashMap//falta os testes
+		[x] TreeMap
+	*[x] Criar uma coleção com um milhão de elementos para cada estrutura de dados avaliando performance de:
+		[x] Busca de um elemento
+		[x] Inserção de um elemento no meio da coleção
+		[x] Inserção no inicio e no final da coleção
+		[x] Remoção de um elemento no meio da coleção
+		[x] Remoção de todos elementos da coleção
+	*Novas funcionalidades das versões 8 do Java na prática
+		[ ] Interfaces Funcionais
+		[ ] Lambda
+		[ ] Generics (https://www.youtube.com/watch?v=vqjA6dqugq8)
+		[ ] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
+		[ ] Optional (https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1)
+		[ ] Streams
+		[ ] API DE DATAS (https://www.baeldung.com/java-datetimeformatter)
+	*Protolo HTTP
+		[ ] Request methods
+		[ ] Header
+		[ ] Body
+		[ ] Path Variable
+		[ ] Query Param
+
+YouTubeYouTube | Geekific
+Generics and Wildcards in Java Made Simple | Geekific
+https://www.youtube.com/watch?v=vqjA6dqugq8&ab_channel=Geekific
+
+MediumMedium
+Optional no Java 8 e no Java 9
+https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1
+
+BaeldungBaeldung
+Guide to DateTimeFormatter | Baeldung
+https://www.baeldung.com/java-datetimeformatter
+
+	*Exercicios
+		[ ] Exemplos Excessoes Tratadas e não tratadas (uso com Try catch)
+		[ ] Acessos por referencia e copia.
+		[ ] Threads
+		[ ] Tratamento de concorrência com syncronized
