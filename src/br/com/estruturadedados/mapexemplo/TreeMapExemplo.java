@@ -1,20 +1,19 @@
 package br.com.estruturadedados.mapexemplo;
 import br.com.estruturadedados.carro.Carro;
+import java.util.TreeMap;
 import java.util.Map;
-import java.util.HashMap;
 import java.util.Random;
 
-/* Map = (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos = +-403ms
- * Busca de um elemento = 20ms O(1)
- * Inserção de um elemento no meio da coleção = 1ms O(1) //sobreescreveu o valor
- * Inserção no inicio e no final da coleção = ?ms O(?) e ?ms O(?) // nao tem comeco e fim
- * Remoção de todos elementos da coleção = 5ms O(n)
- * Remoção de um elemento no meio da coleção = 0ms O(1)
+/* TreeMap = (colocar uma breve explicacao aqui)
+ * tempo de insercao de 1 milhao de elementos = +-748ms
+ * Busca de um elemento = 47ms
+ * Inserção de um elemento = 0ms
+ * Remoção de todos elementos da coleção = 0ms
+ * Remoção de um elemento no meio da coleção = 0ms
  * */
 
-public class MapExemplo {
-    Map<String, Carro> m = new HashMap<String, Carro>();
+public class TreeMapExemplo {
+    Map<String, Carro> m = new TreeMap<>();
 
     private Random g = new Random();
 
@@ -25,7 +24,7 @@ public class MapExemplo {
     private int r1, r2;
 
     public void preencherMap(){
-        for(int i = 0; i < 1000000; i++){
+        for(int i = 1; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
 
@@ -93,3 +92,4 @@ public class MapExemplo {
         System.out.println("Valor removido com sucesso!");
     }
 }
+

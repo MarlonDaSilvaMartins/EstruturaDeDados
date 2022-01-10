@@ -79,7 +79,7 @@ public class TreeSetExemplo {
     }
 
     public void inserirFim(String marca, String modelo, String cor){
-        chassi = ""+(s.size()+1);
+        chassi = ""+(s.size());
         Carro c = new Carro(marca,modelo,cor,chassi);
         s.add(c);
         System.out.println("Valor inserido com sucesso!");
