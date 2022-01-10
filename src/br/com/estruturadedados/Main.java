@@ -21,7 +21,7 @@ public class Main {
         //System.out.println(l.buscar("0934567"));
 
         m.inserirMeio("Fiat","Siena","Vermelho","0000001");
-        System.out.println(m.buscar("0000001"));
+        //System.out.println(m.buscar("0000001"));
 
 
         System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
