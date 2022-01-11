@@ -14,17 +14,19 @@ public class Main {
     public static void main(String[] args){
         //long tempoInicio = System.currentTimeMillis();
 
-        //LinkedHashMapExemplo m = new LinkedHashMapExemplo();
-        TreeMapExemplo m = new TreeMapExemplo();
-        m.preencherMap();
-        long tempoInicio = System.currentTimeMillis();
-        //System.out.println(l.buscar("0934567"));
+        ListExemplo l = new ListExemplo();
 
-        m.inserirMeio("Fiat","Siena","Vermelho","0000001");
-        //System.out.println(m.buscar("0000001"));
+        l.preencherLista();
+
+        l.ordenarCor();
 
 
-        System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
+
+
+
+
+
+        //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
     }//main
 }//class
 /* TreeMap = (colocar uma breve explicacao aqui)

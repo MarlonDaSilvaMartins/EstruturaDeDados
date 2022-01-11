@@ -35,9 +35,9 @@ LinkedList //
  * tam inicial = Linkedlist = sem tamanho inicial | Arraylist = 10 se nao for especificado outro valor na inicializacao
  * tam maximo  = Linkedlist = sem limite | Arraylist = sem limite, quando chega no maximo(10) se expande automaticamente dobrando de tamanho
 
-LinkedHashSet []//
-HashSet [?]//
-TreeSet []//
+LinkedHashSet //
+HashSet //
+TreeSet //
  * add         = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
  * remove      = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
  * busca       = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
@@ -50,9 +50,9 @@ TreeSet []//
                  * relativamente ineficiente a partir de 100 milhoes de elemento devido a distribuicao de 32bits do
                  hashcode que comeca a ficar menos aleatorio e aumentando o numero de colisoes
 
-HashMap [?]//
-LinkedHashMap []//
-TreeMap []//
+HashMap //
+LinkedHashMap //
+TreeMap //
  * add         = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
  * remove      = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
  * busca       = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
@@ -64,3 +64,25 @@ TreeMap []//
                  TreeMap = ordem ascendente ou ordem do camparador
  * tam inicial = LinkedHashMap = 16 | HashMap = 16 | TreeMap = 16
  * tam maximo  = LinkedHashMap = sem limite | HashMap = sem limite | TreeMap = sem limite
+
+ * Interfaces Funcionais = Interface com apenas um metodo abstrato
+        Function  []=
+        Consumer  []= contem uma funcao que recebe um argumento e tem um retorno void
+        Supplier  []= interface que nao aceita argumentos e retorna um resultado
+        Predicate []= contem uma funcao que recebe um argumento e tem um retorno boolean
+ * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
+ * Generics  =
+ * Wildcards =
+ * Optional  =
+ * Streams   = solução para processar coleções de maneira declarativa
+ * API DE DATAS =
+
+ Protocolo HTTP //
+ * Request methods =
+ * Header          =
+ * Body            =
+ * Path Variable   =
+ * Query Param     =
+
+
+ Correção = Interface

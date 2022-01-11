@@ -1,8 +1,18 @@
 package br.com.estruturadedados.listexemplo;
 import br.com.estruturadedados.carro.Carro;
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.function.IntSupplier;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
 
 /* List = (colocar uma breve explicacao aqui)
  * tempo de insercao de 1 milhao de elementos = +-228ms
@@ -24,8 +34,8 @@ public class ListExemplo {
     private String chassi;
     private int r1, r2;
 
-    public void preencherList(){
-        for(int i = 0; i < 1000000; i++){
+    public void preencherLista(){
+        for(int i = 0; i < 10; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
 
@@ -50,9 +60,14 @@ public class ListExemplo {
         }
     }//preencherList
 
-    public void mostrarList(){
-        System.out.println(al);
+    public void mostrarLista(){
+        al.forEach(c -> System.out.println(c));
     }//mostrarList
+
+    public void mostrarConsumer(){
+        Consumer<Carro> carroConsumer = c -> System.out.println(c);
+        al.forEach(carroConsumer);
+    }
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
@@ -90,5 +105,16 @@ public class ListExemplo {
     public void removerMeio(int index){
         al.remove(index);
         System.out.println("Valor removido com sucesso!");
+    }
+
+    public void ordenarCor(){
+        System.out.println(al.stream()
+                .filter(c -> c.getCor() != null)
+                .sorted(comparing(Carro::getCor))
+                .collect(toList()));
+    }
+
+    public void ordenarLista(){
+        al.sort((c1, c2) -> c1.getChassi().compareTo(c2.getChassi()));
     }
 }//classe
