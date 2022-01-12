@@ -42,10 +42,10 @@ Sprint 02
 		[x] Remoção de todos elementos da coleção
 	*Novas funcionalidades das versões 8 do Java na prática
 		[x] interfaces Funcionais
-		   [ ] Function
+		   [x] Function
            [x] Consumer
-           [ ] Supplier
-           [ ] Predicate
+           [x] Supplier
+           [x] Predicate
 		[x] Lambda
 		[ ] Generics (https://www.youtube.com/watch?v=vqjA6dqugq8)
 		[ ] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
@@ -76,3 +76,28 @@ https://www.baeldung.com/java-datetimeformatter
 		[ ] Acessos por referencia e copia.
 		[ ] Threads
 		[ ] Tratamento de concorrência com syncronized
+
+metodo default interface
+https://imasters.com.br/back-end/metodos-padrao-os-herois-nao-divulgados-do-java-8
+https://www.alura.com.br/conteudo/java8-lambdas?gclid=EAIaIQobChMI97HJ_9Wp9QIVD4WRCh2KaA7SEAAYAyAAEgIbtvD_BwE
+
+Consumer, Supplier, Predicate e Function
+https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d
+
+Lambda
+https://rinaldo.dev/java-8-entenda-facilmente-funcoes-lambda-a-principal-novidade/
+
+Stream
+https://www.oracle.com/br/technical-resources/articles/java-stream-api.html
+https://www.baeldung.com/java-maps-streams
+https://mkyong.com/java8/java-8-streams-map-examples/
+
+docker
+https://docs.docker.com/engine/install/ubuntu/#installation-methods
+https://docs.docker.com/engine/install/ubuntu/#installation-methods
+
+mongo
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+sdkman
+https://sdkman.io/install

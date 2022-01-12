@@ -66,10 +66,10 @@ TreeMap //
  * tam maximo  = LinkedHashMap = sem limite | HashMap = sem limite | TreeMap = sem limite
 
  * Interfaces Funcionais = Interface com apenas um metodo abstrato
-        Function  []=
-        Consumer  []= contem uma funcao que recebe um argumento e tem um retorno void
-        Supplier  []= interface que nao aceita argumentos e retorna um resultado
-        Predicate []= contem uma funcao que recebe um argumento e tem um retorno boolean
+        Function  = recebe um argumento e retorna um resultado
+        Consumer  = recebe um argumento e tem um retorno void
+        Supplier  = nao aceita argumentos e retorna um resultado
+        Predicate = recebe um argumento e tem um retorno boolean
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
  * Generics  =
  * Wildcards =

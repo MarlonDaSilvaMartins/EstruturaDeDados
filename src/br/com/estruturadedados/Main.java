@@ -18,13 +18,7 @@ public class Main {
 
         l.preencherLista();
 
-        l.ordenarCor();
-
-
-
-
-
-
+        l.ordenarModelo();
 
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
     }//main

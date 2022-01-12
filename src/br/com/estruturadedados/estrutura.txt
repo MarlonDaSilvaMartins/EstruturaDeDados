@@ -85,4 +85,5 @@ TreeMap //
  * Query Param     =
 
 
- Correção = Interface
+ Correção = pode utilizar metodos concretos em uma interface utilizando o default
+

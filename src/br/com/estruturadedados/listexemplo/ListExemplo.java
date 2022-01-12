@@ -6,10 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.function.Consumer;
-import java.util.function.IntSupplier;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
@@ -32,12 +29,14 @@ public class ListExemplo {
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
-    private int r1, r2;
+    //private int r1, r2;
 
     public void preencherLista(){
         for(int i = 0; i < 10; i++){
-            r1 = g.nextInt(2);
-            r2 = g.nextInt(3);
+            Supplier<Integer> r1 = () -> g.nextInt(2);
+            Supplier<Integer> r2 = () -> g.nextInt(3);
+            //r1 = g.nextInt(2);
+            //r2 = g.nextInt(3);
 
             if(i < 10){
                 chassi = "000000"+(i+1);
@@ -54,7 +53,7 @@ public class ListExemplo {
             }else{
                 chassi = ""+(i+1);
             }
-            Carro c = new Carro(marca, modelo[r1], cor[r2],chassi);
+            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi);
 
             al.add(c);
         }
@@ -63,11 +62,6 @@ public class ListExemplo {
     public void mostrarLista(){
         al.forEach(c -> System.out.println(c));
     }//mostrarList
-
-    public void mostrarConsumer(){
-        Consumer<Carro> carroConsumer = c -> System.out.println(c);
-        al.forEach(carroConsumer);
-    }
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
@@ -107,11 +101,15 @@ public class ListExemplo {
         System.out.println("Valor removido com sucesso!");
     }
 
-    public void ordenarCor(){
-        System.out.println(al.stream()
-                .filter(c -> c.getCor() != null)
-                .sorted(comparing(Carro::getCor))
-                .collect(toList()));
+    public void ordenarModelo(){
+        Predicate<Carro> validaCor = c -> !c.getModelo().isEmpty();
+        Function<Carro,String> mapModelo = c -> c.getModelo();
+        Consumer<String> carroConsumer = c -> System.out.println(c);
+        al.stream()
+                .filter(validaCor)
+                .sorted(comparing(Carro::getModelo))
+                .map(mapModelo)
+                .forEach(carroConsumer);
     }
 
     public void ordenarLista(){

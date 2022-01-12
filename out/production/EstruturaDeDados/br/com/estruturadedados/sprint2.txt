@@ -44,8 +44,8 @@ Sprint 02
 		[x] interfaces Funcionais
 		   [ ] Function
            [x] Consumer
-           [ ] Supplier
-           [ ] Predicate
+           [x] Supplier
+           [x] Predicate
 		[x] Lambda
 		[ ] Generics (https://www.youtube.com/watch?v=vqjA6dqugq8)
 		[ ] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
