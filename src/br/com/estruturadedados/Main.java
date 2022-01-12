@@ -10,15 +10,25 @@ import br.com.estruturadedados.setexemplo.SetExemplo;
 import br.com.estruturadedados.setexemplo.TreeSetExemplo;
 import com.sun.source.tree.Tree;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
         //long tempoInicio = System.currentTimeMillis();
 
         ListExemplo l = new ListExemplo();
+        //l.preencherLista();
+        //l.ordenarModelo();
 
-        l.preencherLista();
+        List<Integer> listaInt = Arrays.asList(10,20,30,40);
 
-        l.ordenarModelo();
+        List<Double> listaDouble = Arrays.asList(9.6,20.4,30.5,39.5);
+
+        System.out.println(l.soma(listaInt));
+
+        System.out.println(l.soma(listaDouble));
+
 
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
     }//main

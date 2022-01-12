@@ -87,7 +87,7 @@ public class ListExemplo {
 
     public void inserirFim(String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
-        al.add(al.size(),c);
+        al.add(c);
         System.out.println("Valor inserido com sucesso!");
     }
 
@@ -114,5 +114,13 @@ public class ListExemplo {
 
     public void ordenarLista(){
         al.sort((c1, c2) -> c1.getChassi().compareTo(c2.getChassi()));
+    }
+
+    public double soma(List <? extends Number> lista){
+        double soma = 0;
+        for(Number n : lista){
+            soma = soma + n.doubleValue();
+        }
+        return soma;
     }
 }//classe

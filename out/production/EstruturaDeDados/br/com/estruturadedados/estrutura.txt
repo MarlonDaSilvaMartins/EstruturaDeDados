@@ -71,8 +71,8 @@ TreeMap //
         Supplier  = nao aceita argumentos e retorna um resultado
         Predicate = recebe um argumento e tem um retorno boolean
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
- * Generics  =
- * Wildcards =
+ * Generics  = extensao que fornece em tempo de compilacao uma verificacao de type-safety de codigo
+ * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
  * Optional  =
  * Streams   = solução para processar coleções de maneira declarativa
  * API DE DATAS =
@@ -84,5 +84,9 @@ TreeMap //
  * Path Variable   =
  * Query Param     =
 
+Try Catch =
 
- Correção = Interface
+
+ Correção = pode utilizar metodos concretos em uma interface utilizando o default
+
+

@@ -1,4 +1,4 @@
-Sprint 02
+Sprint 02 = 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 15110986
 	*Estruturas de dados (List, Map, HashMap, set, stack, queue)
 		[x] equals e hashCode
 		[x] Conceitos de Lista, Fila, e Pilha
@@ -47,8 +47,8 @@ Sprint 02
            [x] Supplier
            [x] Predicate
 		[x] Lambda
-		[ ] Generics (https://www.youtube.com/watch?v=vqjA6dqugq8)
-		[ ] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
+		[x] Generics (https://www.youtube.com/watch?v=vqjA6dqugq8)
+		[x] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
 		[ ] Optional (https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1)
 		[x] Streams
 		[ ] API DE DATAS (https://www.baeldung.com/java-datetimeformatter)
@@ -91,6 +91,15 @@ Stream
 https://www.oracle.com/br/technical-resources/articles/java-stream-api.html
 https://www.baeldung.com/java-maps-streams
 https://mkyong.com/java8/java-8-streams-map-examples/
+
+Generics
+http://www.mauda.com.br/?p=468
+
+Wildcards
+https://techvidvan.com/tutorials/java-wildcards/
+https://www.tutorialspoint.com/java_generics/java_generics_wildcards_guidelines.htm
+https://www.geeksforgeeks.org/wildcards-in-java/
+https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html
 
 docker
 https://docs.docker.com/engine/install/ubuntu/#installation-methods
