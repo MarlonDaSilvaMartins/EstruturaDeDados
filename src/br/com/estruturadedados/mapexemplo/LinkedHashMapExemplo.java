@@ -27,22 +27,8 @@ public class LinkedHashMapExemplo {
         for(int i = 0; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
+            chassi = ""+i;
 
-            if(i < 10){
-                chassi = "000000"+(i+1);
-            }else if(i < 100){
-                chassi = "00000"+(i+1);
-            }else if(i < 1000){
-                chassi = "0000"+(i+1);
-            }else if(i < 10000){
-                chassi = "000"+(i+1);
-            }else if(i < 100000){
-                chassi = "00"+(i+1);
-            }else if(i < 1000000){
-                chassi = "0"+(i+1);
-            }else{
-                chassi = ""+(i+1);
-            }
             Carro c = new Carro(marca,modelo[r1],cor[r2],chassi);
 
             m.put(chassi,c);

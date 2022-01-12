@@ -73,7 +73,7 @@ TreeMap //
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
  * Generics  = extensao que fornece em tempo de compilacao uma verificacao de type-safety de codigo
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
- * Optional  =
+ * Optional  = encapsular o retorno de metodos e informar se um valor esta presente ou ausente
  * Streams   = solução para processar coleções de maneira declarativa
  * API DE DATAS =
 

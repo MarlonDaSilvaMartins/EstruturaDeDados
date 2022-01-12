@@ -22,7 +22,7 @@ public class Main {
         ListExemplo l = new ListExemplo();
         l.preencherLista();
 
-        Optional<Carro> retorno = Optional.ofNullable(l.buscar("0000009"));
+        Optional<Carro> retorno = Optional.ofNullable(l.buscar("673"));
         if(retorno.isPresent()){
             System.out.println("Carro encontrado \n"+retorno);
         } else {
