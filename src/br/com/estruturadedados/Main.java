@@ -11,6 +11,7 @@ import br.com.estruturadedados.setexemplo.SetExemplo;
 import br.com.estruturadedados.setexemplo.TreeSetExemplo;
 import com.sun.source.tree.Tree;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -22,21 +23,14 @@ public class Main {
         ListExemplo l = new ListExemplo();
         l.preencherLista();
 
-        Optional<Carro> retorno = Optional.ofNullable(l.buscar("673"));
-        if(retorno.isPresent()){
-            System.out.println("Carro encontrado \n"+retorno);
-        } else {
-            System.out.println("Carro nao encontrado");
-        }
+        LocalDate data = LocalDate.now();
+        l.inserirFim("Fiat","Palio","Vermelho",data);
+        System.out.println(l.buscar("1000"));
+
+
         //l.ordenarModelo();
-
         //l.inserirFim("Fiat","Siena","Vermelho");
-
         //l.mostrarLista();
-
-
-
-
 
         /*Optional
         Optional<Carro> retorno = Optional.ofNullable(l.buscar("0000009"));
@@ -45,6 +39,7 @@ public class Main {
         } else {
             System.out.println("Carro nao encontrado");
         }*/
+
         /*Wildcard
         List<Integer> listaInt = Arrays.asList(10,20,30,40);
         List<Double> listaDouble = Arrays.asList(9.6,20.4,30.5,39.5);
@@ -55,10 +50,3 @@ public class Main {
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
     }//main
 }//class
-/* TreeMap = (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos = +-748ms
- * Busca de um elemento = 47ms
- * Inserção de um elemento = 0ms
- * Remoção de todos elementos da coleção = 0ms
- * Remoção de um elemento no meio da coleção = 0ms
- * */

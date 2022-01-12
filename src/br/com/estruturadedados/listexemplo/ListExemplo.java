@@ -2,6 +2,7 @@ package br.com.estruturadedados.listexemplo;
 import br.com.estruturadedados.carro.Carro;
 import org.w3c.dom.ls.LSOutput;
 
+import java.time.LocalDate;
 import java.util.*;
 import java.util.function.*;
 
@@ -26,6 +27,7 @@ public class ListExemplo {
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
+    private LocalDate data;
     //private int r1, r2;
 
     public void preencherLista(){
@@ -35,8 +37,8 @@ public class ListExemplo {
             //r1 = g.nextInt(2);
             //r2 = g.nextInt(3);
             chassi = ""+i;
-
-            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi);
+            data = LocalDate.of(2022, 1, 10);
+            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi, data);
 
             al.add(c);
         }
@@ -68,9 +70,9 @@ public class ListExemplo {
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirFim(String marca, String modelo, String cor){
-        chassi = ""+al.size()+1;
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirFim(String marca, String modelo, String cor, LocalDate data){
+        chassi = ""+al.size();
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         al.add(c);
         System.out.println("Valor inserido com sucesso!");
     }
