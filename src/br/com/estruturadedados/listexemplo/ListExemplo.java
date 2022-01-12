@@ -2,10 +2,7 @@ package br.com.estruturadedados.listexemplo;
 import br.com.estruturadedados.carro.Carro;
 import org.w3c.dom.ls.LSOutput;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.function.*;
 
 import static java.util.Comparator.comparing;
@@ -75,17 +72,18 @@ public class ListExemplo {
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
-        al.add(0,c);
+        al.add(0, c);
         System.out.println("Valor inserido com sucesso!");
     }
 
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi){
         Carro c = new Carro(marca,modelo,cor,chassi);
-        al.add(index,c);
+        al.add(index, c);
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirFim(String marca, String modelo, String cor, String chassi){
+    public void inserirFim(String marca, String modelo, String cor){
+        chassi = ""+al.size()+1;
         Carro c = new Carro(marca,modelo,cor,chassi);
         al.add(c);
         System.out.println("Valor inserido com sucesso!");
