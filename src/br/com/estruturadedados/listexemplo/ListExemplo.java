@@ -32,7 +32,7 @@ public class ListExemplo {
     //private int r1, r2;
 
     public void preencherLista(){
-        for(int i = 0; i < 1000; i++){
+        for(int i = 0; i < 1000000; i++){
             Supplier<Integer> r1 = () -> g.nextInt(2);
             Supplier<Integer> r2 = () -> g.nextInt(3);
             //r1 = g.nextInt(2);
@@ -89,11 +89,11 @@ public class ListExemplo {
     }
 
     public void ordenarModelo(){
-        Predicate<Carro> validaCor = c -> !c.getModelo().isEmpty();
+        Predicate<Carro> validaModelo= c -> !c.getModelo().isEmpty();
         Function<Carro,String> mapModelo = c -> c.getModelo();
         Consumer<String> carroConsumer = c -> System.out.println(c);
         al.stream()
-                .filter(validaCor)
+                .filter(validaModelo)
                 .sorted(comparing(Carro::getModelo))
                 .map(mapModelo)
                 .forEach(carroConsumer);

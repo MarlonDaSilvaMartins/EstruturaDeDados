@@ -1,4 +1,4 @@
-Sprint 02 = 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 15110986
+Sprint 02 = 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 15110986
 	*Estruturas de dados (List, Map, HashMap, set, stack, queue)
 		[x] equals e hashCode
 		[x] Conceitos de Lista, Fila, e Pilha
@@ -59,7 +59,7 @@ Sprint 02 = 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 15110986
 		[ ] Path Variable
 		[ ] Query Param
 
-YouTubeYouTube | Geekific
+YouTube | Geekific
 Generics and Wildcards in Java Made Simple | Geekific
 https://www.youtube.com/watch?v=vqjA6dqugq8&ab_channel=Geekific
 
@@ -102,7 +102,7 @@ https://www.geeksforgeeks.org/wildcards-in-java/
 https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html
 
 HTTP
-
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
 
 
 

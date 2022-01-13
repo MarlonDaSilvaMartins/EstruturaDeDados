@@ -80,13 +80,26 @@ TreeMap //
 
  Protocolo HTTP // HyperText Transfer Protocol = protocolo que permite troca de recursos,
                    como documentos HTML. é a base de qualquer troca de dados na Web.
- * Request methods =
- * Header          =
- * Body            =
- * Path Variable   =
- * Query Param     =
+ * Request methods = responsavel por indicar a a açao a ser executada para um recurso
+       -GET     = solicita a representacao de um recurso especifico, deve retornar apenas dados
+       -HEAD    = solicita uma resposta de forma identica ao metodo get, mas sem o corpo da resposta
+       -POST    = submeter uma entidade a um recurso especifico, causando mudanca no estado do recurso ou efeitos colaterais no servidor
+       -PUT     = substitui as atuais representacoes do recurso de destino pela carga de dados da requisicao
+       -DELETE  = remove um recurso
+       CONNECT  = estabeleca uma conexao para o servidor identificado pelo recurso de destino
+       -OPTIONS = usado para descrever as opcoes de comunicacao com o recurso de destino
+       TRACE    = executa um teste de chamada loop-back junto com o caminho para o recurso de destino
+       -PATCH   = utilizado para aplicar modificacoes parciais em um recurso
+ * Header          = permite que o cliente e o servidor passem informaçoes adicionais com a
+                     solicitaçao ou resposta do HTTP
+ * Body            = onde fica os dados enviados ou recebidos do servidor, nem todas requisiçoes tem
+                     um body(GET,HEAD,DELETE e OPTIONS)
+ * Path Variable   = quando passa o valor pela URL, mas como um caminho
+                /usuarios/123
+ * Query Param     = quando passa o valor pela URL, mas como um parametro
+                /usuarios?id=123
 
-Try Catch =
+Try Catch = utilizado para tratar exceçoes
 
 
  Correção = pode utilizar metodos concretos em uma interface utilizando o default
