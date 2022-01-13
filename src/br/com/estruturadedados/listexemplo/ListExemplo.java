@@ -3,6 +3,7 @@ import br.com.estruturadedados.carro.Carro;
 import org.w3c.dom.ls.LSOutput;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.function.*;
 
@@ -58,14 +59,14 @@ public class ListExemplo {
         return resultado;
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         al.add(0, c);
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirMeio(int index, String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         al.add(index, c);
         System.out.println("Valor inserido com sucesso!");
     }

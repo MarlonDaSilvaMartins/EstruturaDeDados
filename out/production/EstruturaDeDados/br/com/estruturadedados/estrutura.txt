@@ -75,9 +75,11 @@ TreeMap //
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
  * Optional  = encapsular o retorno de metodos e informar se um valor esta presente ou ausente
  * Streams   = solução para processar coleções de maneira declarativa
- * API DE DATAS =
+ * API DE DATAS = LocalDate = Capturar data e hora do sistema ou inserir data por meio de metodos
+                  DateTimeFormatter = API utilizada para formatar datas
 
- Protocolo HTTP //
+ Protocolo HTTP // HyperText Transfer Protocol = protocolo que permite troca de recursos,
+                   como documentos HTML. é a base de qualquer troca de dados na Web.
  * Request methods =
  * Header          =
  * Body            =

@@ -1,5 +1,7 @@
 package br.com.estruturadedados.mapexemplo;
 import br.com.estruturadedados.carro.Carro;
+
+import java.time.LocalDate;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
@@ -22,6 +24,7 @@ public class MapExemplo {
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
+    private LocalDate data;
     private int r1, r2;
 
     public void preencherMap(){
@@ -29,8 +32,8 @@ public class MapExemplo {
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
             chassi = ""+i;
-
-            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi);
+            data = LocalDate.of(2022, 1, 10);
+            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
 
             m.put(chassi,c);
         }
@@ -47,23 +50,23 @@ public class MapExemplo {
         return resultado;
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         m.put(chassi,c);
 
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirMeio(String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         m.put(chassi,c);
 
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirFim(String marca, String modelo, String cor){
+    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
         chassi = ""+(m.size());
-        Carro c = new Carro(marca,modelo,cor,chassi);
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         m.put(chassi,c);
 
         System.out.println("Valor inserido com sucesso!");

@@ -2,7 +2,6 @@ package br.com.estruturadedados.carro;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
 import java.util.Objects;
 
 public class Carro implements Comparable<Carro>{
@@ -13,12 +12,6 @@ public class Carro implements Comparable<Carro>{
     private LocalDate data;
 
     public Carro() {
-    }
-    public Carro(String marca, String modelo, String cor, String chassi) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.cor = cor;
-        this.chassi = chassi;
     }
 
     public Carro(String marca, String modelo, String cor, String chassi, LocalDate data) {
@@ -71,12 +64,13 @@ public class Carro implements Comparable<Carro>{
 
     @Override
     public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return "Carro{" +
                 "marca='" + marca +
                 "', modelo='" + modelo +
                 "', cor='" + cor +
                 "', chassi='" + chassi +
-                "', data='" + data+
+                "', data='" + data.format(formatter)+
                 "}\n";
     }
 

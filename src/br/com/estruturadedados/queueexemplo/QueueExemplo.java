@@ -1,5 +1,7 @@
 package br.com.estruturadedados.queueexemplo;
 import br.com.estruturadedados.carro.Carro;
+
+import java.time.LocalDate;
 import java.util.*;
 
 /* Queue= (colocar uma breve explicacao aqui)
@@ -20,6 +22,7 @@ public class QueueExemplo{
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
+    private LocalDate data;
     private int r1, r2;
 
     public void preencherQueue(){
@@ -28,8 +31,8 @@ public class QueueExemplo{
                 r1 = g.nextInt(2);
                 r2 = g.nextInt(3);
                 chassi = ""+i;
-
-                Carro c = new Carro(marca, modelo[r1], cor[r2], chassi);
+                data = LocalDate.of(2022, 1, 10);
+                Carro c = new Carro(marca, modelo[r1], cor[r2], chassi,data);
 
                 q.add(c);
             }
@@ -55,19 +58,19 @@ public class QueueExemplo{
         return resultado;
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi){
+    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
 
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirMeio(String marca, String modelo, String cor, String chassi){
+    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
 
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirFim(String marca, String modelo, String cor){
+    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
         chassi = ""+(q.size()+1);
-        Carro c = new Carro(marca,modelo,cor,chassi);
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         q.add(c);
         System.out.println("Valor inserido com sucesso!");
     }

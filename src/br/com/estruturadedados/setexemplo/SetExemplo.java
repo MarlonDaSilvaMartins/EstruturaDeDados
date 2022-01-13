@@ -1,5 +1,7 @@
 package br.com.estruturadedados.setexemplo;
 import br.com.estruturadedados.carro.Carro;
+
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -22,6 +24,7 @@ public class SetExemplo {
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
+    private LocalDate data;
     private int r1, r2;
 
     public void preencherSet(){
@@ -29,8 +32,8 @@ public class SetExemplo {
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
             chassi = ""+i;
-
-            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi);
+            data = LocalDate.of(2022, 1, 10);
+            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
 
             s.add(c);
         }
@@ -50,21 +53,21 @@ public class SetExemplo {
         return resultado;
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         s.add(c);
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirMeio(String marca, String modelo, String cor, String chassi){
-        Carro c = new Carro(marca,modelo,cor,chassi);
+    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         s.add(c);
         System.out.println("Valor inserido com sucesso!");
     }
 
-    public void inserirFim(String marca, String modelo, String cor){
+    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
         chassi = ""+(s.size());
-        Carro c = new Carro(marca,modelo,cor,chassi);
+        Carro c = new Carro(marca,modelo,cor,chassi,data);
         s.add(c);
         System.out.println("Valor inserido com sucesso!");
     }

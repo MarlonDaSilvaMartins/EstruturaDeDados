@@ -51,8 +51,8 @@ Sprint 02 = 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 15110986
 		[x] Wildcards (https://www.youtube.com/watch?v=do-mETsgox8&t=1513s)
 		[x] Optional (https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1)
 		[x] Streams
-		[ ] API DE DATAS (https://www.baeldung.com/java-datetimeformatter)
-	*Protolo HTTP
+		[x] API DE DATAS (https://www.baeldung.com/java-datetimeformatter)
+	*Protocolo HTTP
 		[ ] Request methods
 		[ ] Header
 		[ ] Body
@@ -100,6 +100,12 @@ https://techvidvan.com/tutorials/java-wildcards/
 https://www.tutorialspoint.com/java_generics/java_generics_wildcards_guidelines.htm
 https://www.geeksforgeeks.org/wildcards-in-java/
 https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html
+
+HTTP
+
+
+
+
 
 docker
 https://docs.docker.com/engine/install/ubuntu/#installation-methods
