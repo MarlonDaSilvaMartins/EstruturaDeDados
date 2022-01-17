@@ -1,4 +1,4 @@
-Sprint 02 = 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 15110986
+Sprint 02 = 
 	*Estruturas de dados (List, Map, HashMap, set, stack, queue)
 		[x] equals e hashCode
 		[x] Conceitos de Lista, Fila, e Pilha
