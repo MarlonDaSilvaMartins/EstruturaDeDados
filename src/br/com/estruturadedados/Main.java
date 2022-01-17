@@ -1,6 +1,7 @@
 package br.com.estruturadedados;
 
 import br.com.estruturadedados.carro.Carro;
+import br.com.estruturadedados.listexemplo.LinkedListExemplo;
 import br.com.estruturadedados.listexemplo.ListExemplo;
 import br.com.estruturadedados.mapexemplo.LinkedHashMapExemplo;
 import br.com.estruturadedados.mapexemplo.MapExemplo;
@@ -22,13 +23,24 @@ public class Main {
     public static void main(String[] args){
         //long tempoInicio = System.currentTimeMillis();
 
-        ListExemplo l = new ListExemplo();
-        l.preencherLista();
+        //ListExemplo l = new ListExemplo();
+        LinkedListExemplo l = new LinkedListExemplo();
+        //QueueExemplo l = new QueueExemplo();
+        //LinkedHashSetExemplo l = new LinkedHashSetExemplo();
+        //SetExemplo l = new SetExemplo();
+        //TreeSetExemplo l = new TreeSetExemplo();
+        //LinkedHashMapExemplo l = new LinkedHashMapExemplo();
+        //MapExemplo l = new MapExemplo();
+        //TreeMapExemplo l = new TreeMapExemplo();
 
-        LocalDate data = LocalDate.now();
-        l.inserirFim("Fiat","Palio","Vermelho",data);
-        System.out.println(l.buscar("1000"));
+        l.preencher();
+        long tempoInicio = System.currentTimeMillis();
+        //LocalDate data = LocalDate.now();
+        //l.inserirFim("Fiat","Palio","Vermelho",data);
+        //System.out.println(l.buscar(56));
+        //l.mostrar();
 
+        System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
 
         //l.ordenarModelo();
         //l.inserirFim("Fiat","Siena","Vermelho");
@@ -48,7 +60,5 @@ public class Main {
         System.out.println(l.soma(listaInt));
         System.out.println(l.soma(listaDouble));
          */
-
-        //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
     }//main
 }//class

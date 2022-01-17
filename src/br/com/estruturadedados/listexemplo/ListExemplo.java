@@ -10,13 +10,13 @@ import java.util.function.*;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
-/* List = (colocar uma breve explicacao aqui)
+/* ArrayList = (colocar uma breve explicacao aqui)
  * tempo de insercao de 1 milhao de elementos = +-228ms
- * Busca de um elemento = 27ms O(N)
- * Inserção de um elemento no meio da coleção = 3ms O(1)
- * Inserção no inicio e no final da coleção = 3ms O(1) e 0ms O(1)
- * Remoção de todos elementos da coleção = 4ms O(N)
- * Remoção de um elemento no meio da coleção = 2ms O(N)
+ * Busca de um elemento = 27ms
+ * Inserção de um elemento no meio da coleção = 3ms
+ * Inserção no inicio e no final da coleção = 3ms e 0ms
+ * Remoção de todos elementos da coleção = 4ms
+ * Remoção de um elemento no meio da coleção = 2ms
  * */
 
 public class ListExemplo {
@@ -31,13 +31,13 @@ public class ListExemplo {
     private LocalDate data;
     //private int r1, r2;
 
-    public void preencherLista(){
+    public void preencher(){
         for(int i = 0; i < 1000000; i++){
             Supplier<Integer> r1 = () -> g.nextInt(2);
             Supplier<Integer> r2 = () -> g.nextInt(3);
             //r1 = g.nextInt(2);
             //r2 = g.nextInt(3);
-            chassi = ""+i;
+            chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
             Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi, data);
 
@@ -45,64 +45,109 @@ public class ListExemplo {
         }
     }//preencherList
 
-    public void mostrarLista(){
+    public void mostrar(){
         al.forEach(c -> System.out.println(c));
     }//mostrarList
 
-    public Carro buscar(String c){
+    public Carro buscar(int c){
         Carro resultado = new Carro();
-        for(Carro valor : al){
-            if(valor.getChassi().equals(c)){
-                resultado = valor;
+        try{
+            resultado = al.get(c);
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }finally {
+            if(resultado != null){
+                return resultado;
+            }else{
+                return null;
             }
         }
-        return resultado;
     }//buscar
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        al.add(0, c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            al.add(0, c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        al.add(index, c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            al.add(index, c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void inserirFim(String marca, String modelo, String cor, LocalDate data){
-        chassi = ""+al.size();
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        al.add(c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            chassi = ""+(al.size()+1);
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            al.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerTudo(){
-        al.clear();
-        System.out.println("Valores removidos com sucesso!");
+        try{
+            al.clear();
+            System.out.println("Valores removidos com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerMeio(int index){
-        al.remove(index);
-        System.out.println("Valor removido com sucesso!");
+        try{
+            al.remove(index);
+            System.out.println("Valor removido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void ordenarModelo(){
-        Predicate<Carro> validaModelo= c -> !c.getModelo().isEmpty();
-        Function<Carro,String> mapModelo = c -> c.getModelo();
-        Consumer<String> carroConsumer = c -> System.out.println(c);
-        al.stream()
-                .filter(validaModelo)
-                .sorted(comparing(Carro::getModelo))
-                .map(mapModelo)
-                .forEach(carroConsumer);
+        try{
+            Predicate<Carro> validaModelo= c -> !c.getModelo().isEmpty();
+            Function<Carro,String> mapModelo = c -> c.getModelo();
+            Consumer<String> carroConsumer = c -> System.out.println(c);
+            al.stream()
+                    .filter(validaModelo)
+                    .sorted(comparing(Carro::getModelo))
+                    .map(mapModelo)
+                    .forEach(carroConsumer);
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void ordenarLista(){
-        al.sort((c1, c2) -> c1.getChassi().compareTo(c2.getChassi()));
+        try{
+            al.sort((c1, c2) -> c1.getCor().compareTo(c2.getCor()));
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
-
+    //wildcards
     public double soma(List <? extends Number> lista){
         double soma = 0;
         for(Number n : lista){

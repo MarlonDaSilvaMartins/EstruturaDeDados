@@ -25,12 +25,12 @@ public class QueueExemplo{
     private LocalDate data;
     private int r1, r2;
 
-    public void preencherQueue(){
+    public void preencher(){
         try{
-            for(int i = 0; i < 1000000; i++) {
+            for(int i = 0; i < 100; i++) {
                 r1 = g.nextInt(2);
                 r2 = g.nextInt(3);
-                chassi = ""+i;
+                chassi = ""+(i+1);
                 data = LocalDate.of(2022, 1, 10);
                 Carro c = new Carro(marca, modelo[r1], cor[r2], chassi,data);
 
@@ -41,53 +41,72 @@ public class QueueExemplo{
         }
     }//preencherList
 
-    public void mostrarQueue(){
+    public void mostrar(){
         System.out.println(q);
     }//mostrarList
 
     public Carro buscar(String c){
         String primeiro = q.peek().getChassi();
         Carro resultado = new Carro();
-
-        do{
-            if(q.peek().getChassi().equals(c)){
-                resultado = q.peek();
+        try{
+            do{
+                if(q.peek().getChassi().equals(c)){
+                    resultado = q.peek();
+                }
+                q.add(q.poll());
+            }while(!q.peek().getChassi().equals(primeiro));
+            return resultado;
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }finally {
+            if(resultado != null){
+                return resultado;
+            }else{
+                return null;
             }
-            q.add(q.poll());
-        }while(!q.peek().getChassi().equals(primeiro));
-        return resultado;
+        }
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
-
-        System.out.println("Valor inserido com sucesso!");
-    }
-
-    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
-
-        System.out.println("Valor inserido com sucesso!");
-    }
-
-    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
-        chassi = ""+(q.size()+1);
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        q.add(c);
-        System.out.println("Valor inserido com sucesso!");
+    public void inserir(String marca, String modelo, String cor,LocalDate data){
+        try{
+            chassi = ""+(q.size()+1);
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            q.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerTudo(){
-        q.clear();
-        System.out.println("Valores removidos com sucesso!");
+        try{
+            q.clear();
+            System.out.println("Valores removidos com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerMeio(String c){
-        String primeiro = q.peek().getChassi();
-        do{
-            if(q.peek().getChassi().equals(c)){
-                q.poll();
-            }
-            q.add(q.poll());
-        }while (!q.peek().getChassi().equals(primeiro));
-        System.out.println("Valor removido com sucesso!");
+        try{
+            String primeiro = q.peek().getChassi();
+            do{
+                if(q.peek().getChassi().equals(c)){
+                    q.poll();
+                    System.out.println("Valor removido com sucesso!");
+                }
+                q.add(q.poll());
+            }while (!q.peek().getChassi().equals(primeiro));
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 }

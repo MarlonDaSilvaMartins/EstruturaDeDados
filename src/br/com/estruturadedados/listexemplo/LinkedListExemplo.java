@@ -1,22 +1,29 @@
-package br.com.estruturadedados.mapexemplo;
+package br.com.estruturadedados.listexemplo;
+
 import br.com.estruturadedados.carro.Carro;
 
 import java.time.LocalDate;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
-/* Map = (colocar uma breve explicacao aqui)
- * tempo de insercao de 1 milhao de elementos = +-403ms
- * Busca de um elemento = 20ms
- * Inserção de um elemento no meio da coleção = 1ms //sobreescreveu o valor
- * Inserção no inicio e no final da coleção = ?ms e ?ms // nao tem comeco e fim
- * Remoção de todos elementos da coleção = 5ms
- * Remoção de um elemento no meio da coleção = 0ms
+import static java.util.Comparator.comparing;
+
+/* LinkedList = (colocar uma breve explicacao aqui)
+ * tempo de insercao de 1 milhao de elementos = +-196ms
+ * Busca de um elemento = 40ms
+ * Inserção de um elemento no meio da coleção = 11ms
+ * Inserção no inicio e no final da coleção = 12ms e 12ms
+ * Remoção de todos elementos da coleção = 3ms
+ * Remoção de um elemento no meio da coleção = 1ms
  * */
 
-public class MapExemplo {
-    Map<String, Carro> m = new HashMap<String, Carro>();
+public class LinkedListExemplo {
+    private List<Carro> l = new ArrayList<>();
 
     private Random g = new Random();
 
@@ -25,28 +32,30 @@ public class MapExemplo {
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    private int r1, r2;
+    //private int r1, r2;
 
     public void preencher(){
-        for(int i = 0; i < 1000000; i++){
-            r1 = g.nextInt(2);
-            r2 = g.nextInt(3);
+        for(int i = 0; i < 100; i++){
+            Supplier<Integer> r1 = () -> g.nextInt(2);
+            Supplier<Integer> r2 = () -> g.nextInt(3);
+            //r1 = g.nextInt(2);
+            //r2 = g.nextInt(3);
             chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
-            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
+            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi, data);
 
-            m.put(chassi,c);
+            l.add(c);
         }
     }//preencherList
 
     public void mostrar(){
-        System.out.println(m);
+        l.forEach(c -> System.out.println(c));
     }//mostrarList
 
-    public Carro buscar(String c){
+    public Carro buscar(int c){
         Carro resultado = new Carro();
         try{
-            resultado = m.get(c);
+            resultado = l.get(c);
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
@@ -60,39 +69,31 @@ public class MapExemplo {
         }
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, LocalDate data){
+    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            chassi = "1";
             Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
-
+            l.add(0, c);
             System.out.println("Valor inserido com sucesso!");
-        }catch (NullPointerException n){
-            System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
         }
     }
 
-    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
+    public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
             Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
-
+            l.add(index, c);
             System.out.println("Valor inserido com sucesso!");
-        }catch (NullPointerException n){
-            System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
         }
     }
 
-    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
+    public void inserirFim(String marca, String modelo, String cor, LocalDate data){
         try{
-            chassi = ""+(m.size()+1);
+            chassi = ""+(l.size()+1);
             Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
-
+            l.add(c);
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -103,7 +104,7 @@ public class MapExemplo {
 
     public void removerTudo(){
         try{
-            m.clear();
+            l.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -112,9 +113,9 @@ public class MapExemplo {
         }
     }
 
-    public void removerMeio(String chave){
+    public void removerMeio(int index){
         try{
-            m.remove(chave);
+            l.remove(index);
             System.out.println("Valor removido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());

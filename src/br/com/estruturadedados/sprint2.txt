@@ -53,33 +53,23 @@ Sprint 02 = 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 15110986
 		[x] Streams
 		[x] API DE DATAS (https://www.baeldung.com/java-datetimeformatter)
 	*Protocolo HTTP
-		[ ] Request methods
-		[ ] Header
-		[ ] Body
-		[ ] Path Variable
-		[ ] Query Param
-
-YouTube | Geekific
-Generics and Wildcards in Java Made Simple | Geekific
-https://www.youtube.com/watch?v=vqjA6dqugq8&ab_channel=Geekific
-
-MediumMedium
-Optional no Java 8 e no Java 9
-https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1
-
-BaeldungBaeldung
-Guide to DateTimeFormatter | Baeldung
-https://www.baeldung.com/java-datetimeformatter
+		[x] Request methods
+		[x] Header
+		[x] Body
+		[x] Path Variable
+		[x] Query Param
 
 	*Exercicios
-		[ ] Exemplos Excessoes Tratadas e não tratadas (uso com Try catch)
+		[x] Exemplos Excessoes Tratadas e não tratadas (uso com Try catch)
 		[ ] Acessos por referencia e copia.
 		[ ] Threads
 		[ ] Tratamento de concorrência com syncronized
 
-metodo default interface
-https://imasters.com.br/back-end/metodos-padrao-os-herois-nao-divulgados-do-java-8
-https://www.alura.com.br/conteudo/java8-lambdas?gclid=EAIaIQobChMI97HJ_9Wp9QIVD4WRCh2KaA7SEAAYAyAAEgIbtvD_BwE
+Collections
+https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298
+https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077
+https://www.devmedia.com.br/conhecendo-a-interface-map-do-java/37463
+https://www.devmedia.com.br/hashmap-java-trabalhando-com-listas-key-value/29811
 
 Consumer, Supplier, Predicate e Function
 https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d
@@ -94,6 +84,7 @@ https://mkyong.com/java8/java-8-streams-map-examples/
 
 Generics
 http://www.mauda.com.br/?p=468
+https://www.youtube.com/watch?v=vqjA6dqugq8&ab_channel=Geekific
 
 Wildcards
 https://techvidvan.com/tutorials/java-wildcards/
@@ -101,10 +92,30 @@ https://www.tutorialspoint.com/java_generics/java_generics_wildcards_guidelines.
 https://www.geeksforgeeks.org/wildcards-in-java/
 https://docs.oracle.com/javase/tutorial/extra/generics/wildcards.html
 
+Optional
+https://medium.com/@racc.costa/optional-no-java-8-e-no-java-9-7c52c4b797f1
+
+API Data - LocalData DataTimeFormatter
+https://www.baeldung.com/java-datetimeformatter
+
 HTTP
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+https://www.w3schools.com/tags/ref_httpmethods.asp
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Messages
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers
+https://www.tutorialspoint.com/http/http_requests.htm
+https://mixedanalytics.com/knowledge-base/add-body-post-requests/
+https://receitasdecodigo.com.br/spring-framework/diferenca-entre-@pathvariable-e-@requestparam-do-spring-mvc
+https://medium.com/@fullsour/when-should-you-use-path-variable-and-query-parameter-a346790e8a6d
+https://www.baeldung.com/spring-pathvariable
 
 
+TryCatch
+https://www.devmedia.com.br/blocos-try-catch/7339
+
+metodo default interface
+https://imasters.com.br/back-end/metodos-padrao-os-herois-nao-divulgados-do-java-8
+https://www.alura.com.br/conteudo/java8-lambdas?gclid=EAIaIQobChMI97HJ_9Wp9QIVD4WRCh2KaA7SEAAYAyAAEgIbtvD_BwE
 
 
 docker

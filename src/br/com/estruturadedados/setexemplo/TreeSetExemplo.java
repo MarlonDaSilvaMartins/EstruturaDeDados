@@ -27,66 +27,107 @@ public class TreeSetExemplo {
     private LocalDate data;
     private int r1, r2;
 
-    public void preencherSet(){
+    public void preencher(){
         for(int i = 0; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
-            chassi = ""+i;
+            chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
             Carro c = new Carro(marca, modelo[r1], cor[r2], chassi,data);
             s.add(c);
         }
     }//preencherList
 
-    public void mostrarSet(){
+    public void mostrar(){
         System.out.println(s);
     }//mostrarList
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
-        for(Carro valor : s){
-            if(valor.getChassi().equals(c)){
-                resultado = valor;
+        try{
+            for(Carro valor : s){
+                if(valor.getChassi().equals(c)){
+                    resultado = valor;
+                }
+            }
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }finally {
+            if(resultado != null){
+                return resultado;
+            }else{
+                return null;
             }
         }
-        return resultado;
     }//buscar
 
     public void inserirInicio(String marca, String modelo, String cor,LocalDate data){
-        chassi = "0000001";
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            chassi = "1";
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            s.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            s.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void inserirFim(String marca, String modelo, String cor,LocalDate data){
-        chassi = ""+(s.size());
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
+        try{
+            chassi = ""+(s.size()+1);
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            s.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerTudo(){
-        s.clear();
-        System.out.println("Valores removidos com sucesso!");
+        try{
+            s.clear();
+            System.out.println("Valores removidos com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerMeio(String c){
-        for(Carro valor : s){
-            if(valor.getChassi().equals(c)){
-                if(s.remove(valor)){
-                    System.out.println("Valor removido com sucesso!");
-                }break;
+        try{
+            for(Carro valor : s){
+                if(valor.getChassi().equals(c)){
+                    if(s.remove(valor)){
+                        System.out.println("Valor removido com sucesso!");
+                    }break;
+                }
             }
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
         }
     }
-}
+}//class
 /*
 TreeSetExemplo t = new TreeSetExemplo();
 t.inserirMeio("Fiat","Palio","Preto","0000004");

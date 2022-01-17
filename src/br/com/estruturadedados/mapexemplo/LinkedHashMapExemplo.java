@@ -26,11 +26,11 @@ public class LinkedHashMapExemplo {
     private LocalDate data;
     private int r1, r2;
 
-    public void preencherMap(){
+    public void preencher(){
         for(int i = 0; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
-            chassi = ""+i;
+            chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
             Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
 
@@ -38,47 +38,92 @@ public class LinkedHashMapExemplo {
         }
     }//preencherList
 
-    public void mostrarMap(){
+    public void mostrar(){
         System.out.println(m);
     }//mostrarList
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
-        resultado = m.get(c);
+        try{
+            resultado = m.get(c);
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }finally {
+            if(resultado != null){
+                return resultado;
+            }else{
+                return null;
+            }
+        }
 
-        return resultado;
+
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        m.put(chassi,c);
+    public void inserirInicio(String marca, String modelo, String cor, LocalDate data){
+        try{
+            chassi = "1";
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            m.put(chassi,c);
 
-        System.out.println("Valor inserido com sucesso!");
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
+
     }
 
     public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        m.put(chassi,c);
+        try{
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            m.put(chassi,c);
 
-        System.out.println("Valor inserido com sucesso!");
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
+
     }
 
     public void inserirFim(String marca, String modelo, String cor,LocalDate data){
-        chassi = ""+(m.size());
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        m.put(chassi,c);
+        try{
+            chassi = ""+(m.size()+1);
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            m.put(chassi,c);
 
-        System.out.println("Valor inserido com sucesso!");
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerTudo(){
-        m.clear();
-        System.out.println("Valores removidos com sucesso!");
+        try{
+            m.clear();
+            System.out.println("Valores removidos com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerMeio(String chave){
-        m.remove(chave);
-        System.out.println("Valor removido com sucesso!");
+        try{
+            m.remove(chave);
+            System.out.println("Valor removido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 }
 

@@ -8,11 +8,11 @@ import java.util.Set;
 
 /* Set = representa grupos de elementos sem duplicatas, é utilizado quando não precisar ter nenhum dado duplicado na coleção.
  * tempo de insercao de 1 milhao de elementos = +-774ms
- * Busca de um elemento = 114ms O(n)
- * Inserção de um elemento no meio da coleção = ?ms O(1) //
- * Inserção no inicio e no final da coleção = ?ms O(?) e 1ms O(1) //peguei o valor do size() e inseri com o numero do chassi maior que o ultimo adicionado
- * Remoção de todos elementos da coleção = 5ms O(n)
- * Remoção de um elemento no meio da coleção = 43ms O(n)
+ * Busca de um elemento = 114ms
+ * Inserção de um elemento no meio da coleção = ?ms
+ * Inserção no inicio e no final da coleção = ?ms e 1ms
+ * Remoção de todos elementos da coleção = 5ms
+ * Remoção de um elemento no meio da coleção = 43ms
  * */
 
 public class SetExemplo {
@@ -27,11 +27,11 @@ public class SetExemplo {
     private LocalDate data;
     private int r1, r2;
 
-    public void preencherSet(){
-        for(int i = 0; i < 1000000; i++){
+    public void preencher(){
+        for(int i = 0; i < 10; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
-            chassi = ""+i;
+            chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
             Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
 
@@ -39,51 +39,68 @@ public class SetExemplo {
         }
     }//preencherList
 
-    public void mostrarSet(){
+    public void mostrar(){
         System.out.println(s);
     }//mostrarList
 
     public Carro buscar(String c){
         Carro resultado = new Carro();
-        for(Carro valor : s){
-            if(valor.getChassi().equals(c)){
-                resultado = valor;
+        try{
+            for(Carro valor : s){
+                if(valor.getChassi().equals(c)){
+                    resultado = valor;
+                }
+            }
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }finally {
+            if(resultado != null){
+                return resultado;
+            }else{
+                return null;
             }
         }
-        return resultado;
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
-    }
-
-    public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
-    }
-
-    public void inserirFim(String marca, String modelo, String cor,LocalDate data){
-        chassi = ""+(s.size());
-        Carro c = new Carro(marca,modelo,cor,chassi,data);
-        s.add(c);
-        System.out.println("Valor inserido com sucesso!");
+    public void inserir(String marca, String modelo, String cor,LocalDate data){
+        try{
+            chassi = ""+(s.size()+1);
+            Carro c = new Carro(marca,modelo,cor,chassi,data);
+            s.add(c);
+            System.out.println("Valor inserido com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerTudo(){
-        s.clear();
-        System.out.println("Valores removidos com sucesso!");
+        try{
+            s.clear();
+            System.out.println("Valores removidos com sucesso!");
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
     }
 
     public void removerMeio(String c){
-        for(Carro valor : s){
-            if(valor.getChassi().equals(c)){
-                if(s.remove(valor)){
-                    System.out.println("Valor removido com sucesso!");
-                }break;
+        try{
+            for(Carro valor : s){
+                if(valor.getChassi().equals(c)){
+                    if(s.remove(valor)){
+                        System.out.println("Valor removido com sucesso!");
+                    }break;
+                }
             }
+        }catch (NullPointerException n){
+            System.out.println("Erro: "+n.getMessage());
+        }catch (Exception e){
+            System.out.println("Erro: "+e.getMessage());
         }
     }
-}
+}//class
