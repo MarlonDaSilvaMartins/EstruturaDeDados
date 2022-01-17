@@ -12,35 +12,41 @@ pilha  // estrutura de dados em que o acesso é restrito ao elemento mais recent
           top: observar topo
           Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
 
-hash   // é uma tabela onde as informalçoes sao armazenadas conforme um numero hash, calculado com base nas proproedades
+HashCode   // é uma tabela onde as informaçoes sao armazenadas conforme um numero hash, calculado com base nas propriedades
           da informação
 
 equals // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
           propriedades
 
-list //
-queue //
-set //
-map //
+list  // interface que especifica o necessario para implementar uma lista
+queue // interface que especifica o necessario para implementar uma fila
+set   // interface representa grupos de elementos sem duplicatas
+map   // interface que permite trabalhar com uma estrutura de chave e valor
 
-ArrayList //
-LinkedList //
- * add(e)      = LinkedList = O(1) | ArrayList = O(n)
- * add(i, e)   = LinkedList = O(n) | ArrayList = O(n) no pior caso, o array será redimensionado e copiado para um novo array
- * remove      = LinkedList possui O(n) e ArrayList possui O(n-index) se remover o ultimo ele mento será O(1)
- * get         = LinkedList = O(n) | ArrayList = O(1)
- * set         = LinkedList = O(n) | ArrayList = O(n)
+ArrayList  // classe faz a implementação de um array redimensionavel
+LinkedList // classe que implementa uma estrutura de dados tipo lista encadeada
+ * preencher   = LinkedList = 196ms | ArrayList = 228ms
+ * buscar      = LinkedList = 40ms  | ArrayList = 27ms
+ * inicio      = LinkedList = 12ms  | ArrayList = 33ms
+ * meio        = LinkedList = 11ms  | ArrayList = 3ms
+ * fim         = LinkedList = 12ms  | ArrayList = 0ms
+ * remover     = LinkedList = 3ms   | ArrayList = 4ms
+ * rem. meio   = LinkedList = 1ms   | ArrayList = 2ms
  * duplicado   = Linkedlist = Permite valores duplicados pois cada valor é guardado em um nodo diferente
                  Arraylist  = Permite valores duplicados pois guarda o objeto da maneira que sao inseridos
  * tam inicial = Linkedlist = sem tamanho inicial | Arraylist = 10 se nao for especificado outro valor na inicializacao
  * tam maximo  = Linkedlist = sem limite | Arraylist = sem limite, quando chega no maximo(10) se expande automaticamente dobrando de tamanho
 
-LinkedHashSet //
-HashSet //
-TreeSet //
- * add         = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
- * remove      = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
- * busca       = LinkedHashSet = O(1) | HashSet = O(1) | TreeSet = O(log n)
+LinkedHashSet // faz a utilizacao de hashtable e linkedlist, os elementos continuam na ordem que sao inseridos
+HashSet       // classe que implementa o set, utilizando uma hashtable e seus elementos nao sao ordenados
+TreeSet       // implementa um algoritmo conhecido por red-black tree, insere sempre ordenados
+ * preencher   = LinkedHashSet = 698ms | HashSet = 774ms | TreeSet = 1073ms
+ * buscar      = LinkedHashSet = 45ms  | HashSet = 114ms | TreeSet = 88ms
+ * inicio      = LinkedHashSet = ?ms   | HashSet = ?ms   | TreeSet = 1ms
+ * meio        = LinkedHashSet = ?ms   | HashSet = ?ms   | TreeSet = 1ms
+ * fim         = LinkedHashSet = 1ms   | HashSet = 1ms   | TreeSet = 1ms
+ * remover     = LinkedHashSet = 5ms   | HashSet = 5ms  | TreeSet = 1ms
+ * rem. meio   = LinkedHashSet = 31ms  | HashSet = 43ms  | TreeSet = 26ms
  * duplicado   = LinkedHashSet = nao permite | HashSet = nao permite | TreeSet = nao permite
  * ordenacao   = LinkedHashSet = ordem de inserção
                  HashSet = nao mantem ordem
@@ -50,12 +56,16 @@ TreeSet //
                  * relativamente ineficiente a partir de 100 milhoes de elemento devido a distribuicao de 32bits do
                  hashcode que comeca a ficar menos aleatorio e aumentando o numero de colisoes
 
-HashMap //
-LinkedHashMap //
-TreeMap //
- * add         = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
- * remove      = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
- * busca       = LinkedHashMap = O(1) | HashMap = O(1) | TreeMap = O(log n)
+HashMap       // cada elemento da lista possui uma chave e um valor associado
+LinkedHashMap // similar ao hashmap, porem guarda os elementos na ordem que sao inseridos
+TreeMap       // ordena os elementos de maneira natural de conforme o metodo compareTo no momento da inserção
+ * preencher   = HashMap = 403ms   | LinkedHashMap = 481ms  | TreeMap = 748ms
+ * buscar      = HashMap = 20ms    | LinkedHashMap = 29ms   | TreeMap = 47ms
+ * inicio      = HashMap = ?ms     | LinkedHashMap = ?ms    | TreeMap = 1ms
+ * meio        = HashMap = ?ms     | LinkedHashMap = ?ms    | TreeMap = 1ms
+ * fim         = HashMap = 1ms     | LinkedHashMap = 0ms    | TreeMap = 0ms
+ * remover     = HashMap = 5ms     | LinkedHashMap = 15ms   | TreeMap = 0ms
+ * rem. meio   = HashMap = 0ms     | LinkedHashMap = 0ms    | TreeMap = 0ms
  * duplicado   = LinkedHashMap = nao contem chaves duplicadas
                  HashMap = nao contem chaves duplicadas
                  TreeMap = nao contem chaves duplicadas

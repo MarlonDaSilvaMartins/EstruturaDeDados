@@ -1,4 +1,4 @@
-Sprint 02 = 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 15110986
+Sprint 02 = 
 	*Estruturas de dados (List, Map, HashMap, set, stack, queue)
 		[x] equals e hashCode
 		[x] Conceitos de Lista, Fila, e Pilha
@@ -65,9 +65,11 @@ Sprint 02 = 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 15110986
 		[ ] Threads
 		[ ] Tratamento de concorrência com syncronized
 
-metodo default interface
-https://imasters.com.br/back-end/metodos-padrao-os-herois-nao-divulgados-do-java-8
-https://www.alura.com.br/conteudo/java8-lambdas?gclid=EAIaIQobChMI97HJ_9Wp9QIVD4WRCh2KaA7SEAAYAyAAEgIbtvD_BwE
+Collections
+https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298
+https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077
+https://www.devmedia.com.br/conhecendo-a-interface-map-do-java/37463
+https://www.devmedia.com.br/hashmap-java-trabalhando-com-listas-key-value/29811
 
 Consumer, Supplier, Predicate e Function
 https://medium.com/swlh/understanding-java-8s-consumer-supplier-predicate-and-function-c1889b9423d
@@ -110,6 +112,10 @@ https://www.baeldung.com/spring-pathvariable
 
 TryCatch
 https://www.devmedia.com.br/blocos-try-catch/7339
+
+metodo default interface
+https://imasters.com.br/back-end/metodos-padrao-os-herois-nao-divulgados-do-java-8
+https://www.alura.com.br/conteudo/java8-lambdas?gclid=EAIaIQobChMI97HJ_9Wp9QIVD4WRCh2KaA7SEAAYAyAAEgIbtvD_BwE
 
 
 docker
