@@ -1,22 +1,22 @@
-lista  // estrutura de dados do qual um conjunto de dados é acessivel em uma sequencia determinada
-          receber dados do banco, lista de um carinho de compras
+lista    // estrutura de dados do qual um conjunto de dados é acessivel em uma sequencia determinada
+            receber dados do banco, lista de um carinho de compras
 
-fila   // estrutura de dados linear do qual o primeiro resultado a entrar é o primeiro a sair(FIFO)
-          remoção: remove do topo
-          inserção: insere no fim
-          pedidos, sistema de fila, caminhoes esperando pela descarga
+fila     // estrutura de dados linear do qual o primeiro resultado a entrar é o primeiro a sair(FIFO)
+            remoção: remove do topo
+            inserção: insere no fim
+            pedidos, sistema de fila, caminhoes esperando pela descarga
 
-pilha  // estrutura de dados em que o acesso é restrito ao elemento mais recente da pilha(LIFO),
-          push: inserir no topo
-          pop: retirar do topo
-          top: observar topo
-          Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
+pilha    // estrutura de dados em que o acesso é restrito ao elemento mais recente da pilha(LIFO),
+            push: inserir no topo
+            pop: retirar do topo
+            top: observar topo
+            Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
 
-HashCode   // é uma tabela onde as informaçoes sao armazenadas conforme um numero hash, calculado com base nas propriedades
-          da informação
+HashCode // método que retorna um código hash de um objeto.
+hash     // algoritmo que mapeia dados grandes e de tamanho variavel para pequenos dados de tamanho fixo
 
-equals // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
-          propriedades
+equals   // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
+            propriedades
 
 list  // interface que especifica o necessario para implementar uma lista
 queue // interface que especifica o necessario para implementar uma fila

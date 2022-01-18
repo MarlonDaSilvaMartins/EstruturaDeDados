@@ -24,7 +24,7 @@ public class Main {
         //long tempoInicio = System.currentTimeMillis();
 
         //ListExemplo l = new ListExemplo();
-        //LinkedListExemplo l = new LinkedListExemplo();
+        LinkedListExemplo l = new LinkedListExemplo();
         //QueueExemplo l = new QueueExemplo();
         //LinkedHashSetExemplo l = new LinkedHashSetExemplo();
         //SetExemplo l = new SetExemplo();
@@ -32,15 +32,12 @@ public class Main {
         //LinkedHashMapExemplo l = new LinkedHashMapExemplo();
         //MapExemplo l = new MapExemplo();
         //TreeMapExemplo l = new TreeMapExemplo();
-
-        //l.preencher();
+        l.preencher();
         //LocalDate data = LocalDate.now();
         //l.inserirFim("Fiat","Palio","Vermelho",data);
         //System.out.println(l.buscar(56));
         //l.mostrar();
 
-        String nome = "marlo";
-        System.out.println(nome.hashCode());
 
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
 

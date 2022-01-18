@@ -51,7 +51,7 @@ TreeSet       // implementa um algoritmo conhecido por red-black tree, insere se
  * ordenacao   = LinkedHashSet = ordem de inserção
                  HashSet = nao mantem ordem
                  TreeSet = ordem ascendente ou ordem do camparador
- * tam inicial = LinkedHashSet = 16 buckets | HashSet = 16 | TreeSet = 16
+ * tam inicial = LinkedHashSet = 16 | HashSet = 16 | TreeSet = 16
  * tam maximo  = LinkedHashSet = sem limite | HashSet = sem limite* | TreeSet = sem limite
                  * relativamente ineficiente a partir de 100 milhoes de elemento devido a distribuicao de 32bits do
                  hashcode que comeca a ficar menos aleatorio e aumentando o numero de colisoes
@@ -59,13 +59,13 @@ TreeSet       // implementa um algoritmo conhecido por red-black tree, insere se
 HashMap       // cada elemento da lista possui uma chave e um valor associado
 LinkedHashMap // similar ao hashmap, porem guarda os elementos na ordem que sao inseridos
 TreeMap       // ordena os elementos de maneira natural de conforme o metodo compareTo no momento da inserção
- * preencher   = HashMap = 403ms   | LinkedHashMap = 481ms  | TreeMap = 748ms
- * buscar      = HashMap = 20ms    | LinkedHashMap = 29ms   | TreeMap = 47ms
- * inicio      = HashMap = ?ms     | LinkedHashMap = ?ms    | TreeMap = 1ms
- * meio        = HashMap = ?ms     | LinkedHashMap = ?ms    | TreeMap = 1ms
- * fim         = HashMap = 1ms     | LinkedHashMap = 0ms    | TreeMap = 0ms
- * remover     = HashMap = 5ms     | LinkedHashMap = 15ms   | TreeMap = 0ms
- * rem. meio   = HashMap = 0ms     | LinkedHashMap = 0ms    | TreeMap = 0ms
+ * preencher   = HashMap = 403ms | LinkedHashMap = 481ms | TreeMap = 748ms
+ * buscar      = HashMap = 20ms  | LinkedHashMap = 29ms  | TreeMap = 47ms
+ * inicio      = HashMap = ?ms   | LinkedHashMap = ?ms   | TreeMap = 1ms
+ * meio        = HashMap = ?ms   | LinkedHashMap = ?ms   | TreeMap = 1ms
+ * fim         = HashMap = 1ms   | LinkedHashMap = 0ms   | TreeMap = 0ms
+ * remover     = HashMap = 5ms   | LinkedHashMap = 15ms  | TreeMap = 0ms
+ * rem. meio   = HashMap = 0ms   | LinkedHashMap = 0ms   | TreeMap = 0ms
  * duplicado   = LinkedHashMap = nao contem chaves duplicadas
                  HashMap = nao contem chaves duplicadas
                  TreeMap = nao contem chaves duplicadas
@@ -113,6 +113,11 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
         3xx = Redirecionamento = endereço antigo aponta para o endereço novo
         4xx = Erro no cliente  = parametros invalidos, insuficientes ou endereço que nao tem nenhuma pagina
         5xx = Erro no servidor = banco de dados fora do ar ou erro de codigo do lado do servidor
+**Cookies = fragmento de dados que o servidor envia para o navegador, o navegador pode armazenar estes dados e enviar de volta na proxima requisição
+        Gerenciamento de sessao = login, carrinho de compras, placar de jogos ou qualquer atividade que deva ser guardada
+        Personalização          = preferencias de usuarios, temas e outras configuraçoes
+        ratreamento             = registro e analise do comportamento de um usuario
+  Set-Cookie: <cookie-name>=<cookie-value>
 
 Try Catch = utilizado para tratar exceçoes
 

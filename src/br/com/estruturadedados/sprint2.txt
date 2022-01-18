@@ -108,6 +108,8 @@ https://mixedanalytics.com/knowledge-base/add-body-post-requests/
 https://receitasdecodigo.com.br/spring-framework/diferenca-entre-@pathvariable-e-@requestparam-do-spring-mvc
 https://medium.com/@fullsour/when-should-you-use-path-variable-and-query-parameter-a346790e8a6d
 https://www.baeldung.com/spring-pathvariable
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Cookie
 
 
 TryCatch
