@@ -63,7 +63,11 @@ Sprint 02 =
 		[x] Exemplos Excessoes Tratadas e não tratadas (uso com Try catch)
 		[ ] Acessos por referencia e copia.
 		[ ] Threads
-		[ ] Tratamento de concorrência com syncronized
+		[ ] Tratamento de concorrência com syncronize
+
+
+Hash
+https://pt.stackoverflow.com/questions/184019/o-que-%C3%A9-hashcode-e-qual-sua-finalidade
 
 Collections
 https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298
@@ -108,6 +112,8 @@ https://mixedanalytics.com/knowledge-base/add-body-post-requests/
 https://receitasdecodigo.com.br/spring-framework/diferenca-entre-@pathvariable-e-@requestparam-do-spring-mvc
 https://medium.com/@fullsour/when-should-you-use-path-variable-and-query-parameter-a346790e8a6d
 https://www.baeldung.com/spring-pathvariable
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Cookie
 
 
 TryCatch
