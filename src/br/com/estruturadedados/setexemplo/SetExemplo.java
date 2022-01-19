@@ -28,7 +28,7 @@ public class SetExemplo {
     private int r1, r2;
 
     public void preencher(){
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 1000000; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
             chassi = ""+(i+1);

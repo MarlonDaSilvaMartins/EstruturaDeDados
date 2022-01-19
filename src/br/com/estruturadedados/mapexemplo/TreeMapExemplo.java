@@ -27,7 +27,7 @@ public class TreeMapExemplo {
     private int r1, r2;
 
     public void preencher(){
-        for(int i = 1; i < 1000000; i++){
+        for(int i = 1; i < 10; i++){
             r1 = g.nextInt(2);
             r2 = g.nextInt(3);
             chassi = ""+(i+1);
@@ -59,8 +59,9 @@ public class TreeMapExemplo {
         }
     }//buscar
 
-    public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
+    public void inserirInicio(String marca, String modelo, String cor, LocalDate data){
         try{
+            chassi = "1";
             Carro c = new Carro(marca,modelo,cor,chassi,data);
             m.put(chassi,c);
 
