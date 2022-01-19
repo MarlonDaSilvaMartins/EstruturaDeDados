@@ -63,7 +63,11 @@ Sprint 02 =
 		[x] Exemplos Excessoes Tratadas e não tratadas (uso com Try catch)
 		[ ] Acessos por referencia e copia.
 		[ ] Threads
-		[ ] Tratamento de concorrência com syncronized
+		[ ] Tratamento de concorrência com syncronize
+
+
+Hash
+https://pt.stackoverflow.com/questions/184019/o-que-%C3%A9-hashcode-e-qual-sua-finalidade
 
 Collections
 https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298

@@ -13,12 +13,18 @@ pilha    // estrutura de dados em que o acesso é restrito ao elemento mais rece
             Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
 
 HashCode // método que retorna um código hash de um objeto.
-hash     // algoritmo que mapeia dados grandes e de tamanho variavel para pequenos dados de tamanho fixo
+hash     // dado real aplicando uma formula para descobrir qual é o numero que o dado corresponde
 
 equals   // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
-            propriedades
 
-list  // interface que especifica o necessario para implementar uma lista
+
+            List = coleção ordenada que pode conter valores repetidos
+
+            Set  = colecao que nao pode conter valores duplicados
+
+            map  = relação chave valor
+
+list  // interface que representa grupos ordenados e permite valores duplicados
 queue // interface que especifica o necessario para implementar uma fila
 set   // interface representa grupos de elementos sem duplicatas
 map   // interface que permite trabalhar com uma estrutura de chave e valor
