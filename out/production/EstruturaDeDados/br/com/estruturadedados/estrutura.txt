@@ -13,7 +13,7 @@ pilha    // estrutura de dados em que o acesso é restrito ao elemento mais rece
             Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
 
 HashCode // método que retorna um código hash de um objeto.
-hash     // dado real aplicando uma formula para descobrir qual é o numero que o dado corresponde
+hash     // pega o dado aplicando uma formula para descobrir qual é o numero que o dado corresponde
 
 equals   // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
 

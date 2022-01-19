@@ -36,7 +36,7 @@ public class Main {
         //LocalDate data = LocalDate.now();
         //l.inserirFim("Fiat","Palio","Vermelho",data);
         //System.out.println(l.buscar(56));
-        //l.mostrar();
+        l.mostrar();
 
 
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));

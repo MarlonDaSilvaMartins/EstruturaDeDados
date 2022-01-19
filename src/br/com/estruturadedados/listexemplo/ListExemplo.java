@@ -32,7 +32,7 @@ public class ListExemplo {
     //private int r1, r2;
 
     public void preencher(){
-        for(int i = 0; i < 1000000; i++){
+        for(int i = 0; i < 100; i++){
             Supplier<Integer> r1 = () -> g.nextInt(2);
             Supplier<Integer> r2 = () -> g.nextInt(3);
             //r1 = g.nextInt(2);
@@ -79,7 +79,7 @@ public class ListExemplo {
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
             Carro c = new Carro(marca,modelo,cor,chassi,data);
-            al.add(index, c);
+            al.add((index-1), c);
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());

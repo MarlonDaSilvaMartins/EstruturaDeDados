@@ -82,7 +82,7 @@ public class LinkedListExemplo {
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
             Carro c = new Carro(marca,modelo,cor,chassi,data);
-            l.add(index, c);
+            l.add((index-1), c);
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
