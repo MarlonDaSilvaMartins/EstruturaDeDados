@@ -23,39 +23,36 @@ import static java.util.Comparator.comparing;
  * */
 
 public class LinkedListExemplo {
-    private List<Carro> l = new ArrayList<>();
+    private List<Carro> list = new ArrayList<>();
 
-    private Random g = new Random();
+    private Random random = new Random();
 
     private String marca = "Fiat";
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    //private int r1, r2;
 
     public void preencher(){
         for(int i = 0; i < 1000000; i++){
-            Supplier<Integer> r1 = () -> g.nextInt(2);
-            Supplier<Integer> r2 = () -> g.nextInt(3);
-            //r1 = g.nextInt(2);
-            //r2 = g.nextInt(3);
+            Supplier<Integer> random1 = () -> random.nextInt(2);
+            Supplier<Integer> random2 = () -> random.nextInt(3);
             chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
-            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi, data);
+            Carro carro = new Carro(marca, modelo[random1.get()], cor[random2.get()],chassi, data);
 
-            l.add(c);
+            list.add(carro);
         }
     }//preencherList
 
     public void mostrar(){
-        l.forEach(c -> System.out.println(c));
+        list.forEach(c -> System.out.println(c));
     }//mostrarList
 
-    public Carro buscar(int c){
+    public Carro buscar(int chassi){
         Carro resultado = new Carro();
         try{
-            resultado = l.get(c);
+            resultado = list.get(chassi);
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
@@ -71,8 +68,8 @@ public class LinkedListExemplo {
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            l.add(0, c);
+            Carro carro  = new Carro(marca,modelo,cor,chassi,data);
+            list.add(0, carro );
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
@@ -81,8 +78,8 @@ public class LinkedListExemplo {
 
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            l.add((index-1), c);
+            Carro carro  = new Carro(marca,modelo,cor,chassi,data);
+            list.add((index-1), carro );
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
@@ -91,9 +88,9 @@ public class LinkedListExemplo {
 
     public void inserirFim(String marca, String modelo, String cor, LocalDate data){
         try{
-            chassi = ""+(l.size()+1);
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            l.add(c);
+            chassi = ""+(list.size()+1);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            list.add(carro );
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -104,7 +101,7 @@ public class LinkedListExemplo {
 
     public void removerTudo(){
         try{
-            l.clear();
+            list.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -115,7 +112,7 @@ public class LinkedListExemplo {
 
     public void removerMeio(int index){
         try{
-            l.remove(index);
+            list.remove(index);
             System.out.println("Valor removido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());

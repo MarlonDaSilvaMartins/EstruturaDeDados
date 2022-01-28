@@ -13,16 +13,9 @@ pilha    // estrutura de dados em que o acesso é restrito ao elemento mais rece
             Mecanismo de fazer/desfazer de editor de texto, navegação entre paginas web
 
 HashCode // método que retorna um código hash de um objeto.
-hash     // pega o dado aplicando uma formula para descobrir qual é o numero que o dado corresponde
+hash     // dado aplicado em uma formula para descobrir o numero que o dado corresponde
 
 equals   // garante que dois objetos sao significativamente iguais, que tenham um valor igual de acordo com suas
-
-
-            List = coleção ordenada que pode conter valores repetidos
-
-            Set  = colecao que nao pode conter valores duplicados
-
-            map  = relação chave valor
 
 list  // interface que representa grupos ordenados e permite valores duplicados
 queue // interface que especifica o necessario para implementar uma fila
@@ -62,6 +55,14 @@ TreeSet       // implementa um algoritmo conhecido por red-black tree, insere se
                  * relativamente ineficiente a partir de 100 milhoes de elemento devido a distribuicao de 32bits do
                  hashcode que comeca a ficar menos aleatorio e aumentando o numero de colisoes
 
+                             13
+                           /    \
+                          8      17
+                         / \     / \
+                        1  11   15  25
+                         \          / \
+                          6        22  27
+
 HashMap       // cada elemento da lista possui uma chave e um valor associado
 LinkedHashMap // similar ao hashmap, porem guarda os elementos na ordem que sao inseridos
 TreeMap       // ordena os elementos de maneira natural de conforme o metodo compareTo no momento da inserção
@@ -91,21 +92,20 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
  * Optional  = encapsular o retorno de metodos e informar se um valor esta presente ou ausente
  * Streams   = solução para processar coleções de maneira declarativa
- * API DE DATAS = LocalDate = Capturar data e hora do sistema ou inserir data por meio de metodos
+ * API DE DATAS = LocalDate = Capturar data do sistema ou inserir data por meio de metodos
                   DateTimeFormatter = API utilizada para formatar datas
 
- Protocolo HTTP // HyperText Transfer Protocol = protocolo que permite troca de recursos,
-                   como documentos HTML. é a base de qualquer troca de dados na Web.
+ Protocolo HTTP // HyperText Transfer Protocol = protocolo que permite troca de recursos, como documentos HTML. é a base de qualquer troca de dados na Web.
  * Request methods = responsavel por indicar a a açao a ser executada para um recurso
        -GET     = solicita a representacao de um recurso especifico, deve retornar apenas dados
        -HEAD    = solicita uma resposta de forma identica ao metodo get, mas sem o corpo da resposta
        -POST    = submeter uma entidade a um recurso especifico, causando mudanca no estado do recurso ou efeitos colaterais no servidor
        -PUT     = substitui as atuais representacoes do recurso de destino pela carga de dados da requisicao
+       -PATCH   = utilizado para aplicar modificacoes parciais em um recurso
        -DELETE  = remove um recurso
        CONNECT  = estabeleca uma conexao para o servidor identificado pelo recurso de destino
        -OPTIONS = quer pegar informacoes para saber se certa açao funciona
        TRACE    = retorna as informacoes que chegaram ao servidor
-       -PATCH   = utilizado para aplicar modificacoes parciais em um recurso
  * Header          = permite que o cliente e o servidor passem informaçoes adicionais com a
                      solicitaçao ou resposta do HTTP
  * Body            = onde fica os dados enviados ou recebidos do servidor, nem todas requisiçoes tem

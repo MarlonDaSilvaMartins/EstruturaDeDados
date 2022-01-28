@@ -16,38 +16,38 @@ import java.util.Set;
  * */
 
 public class SetExemplo {
-    Set<Carro> s = new HashSet<>();
+    Set<Carro> set = new HashSet<>();
 
-    private Random g = new Random();
+    private Random random = new Random();
 
     private String marca = "Fiat";
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    private int r1, r2;
+    private int random1, random2;
 
     public void preencher(){
         for(int i = 0; i < 1000000; i++){
-            r1 = g.nextInt(2);
-            r2 = g.nextInt(3);
+            random1 = random.nextInt(2);
+            random2 = random.nextInt(3);
             chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
-            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
+            Carro carro = new Carro(marca,modelo[random1],cor[random2],chassi,data);
 
-            s.add(c);
+            set.add(carro);
         }
     }//preencherList
 
     public void mostrar(){
-        System.out.println(s);
+        System.out.println(set);
     }//mostrarList
 
-    public Carro buscar(String c){
+    public Carro buscar(String chassi){
         Carro resultado = new Carro();
         try{
-            for(Carro valor : s){
-                if(valor.getChassi().equals(c)){
+            for(Carro valor : set){
+                if(valor.getChassi().equals(chassi)){
                     resultado = valor;
                 }
             }
@@ -66,9 +66,9 @@ public class SetExemplo {
 
     public void inserir(String marca, String modelo, String cor,LocalDate data){
         try{
-            chassi = ""+(s.size()+1);
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            s.add(c);
+            chassi = ""+(set.size()+1);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            set.add(carro);
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -79,7 +79,7 @@ public class SetExemplo {
 
     public void removerTudo(){
         try{
-            s.clear();
+            set.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -88,11 +88,11 @@ public class SetExemplo {
         }
     }
 
-    public void removerMeio(String c){
+    public void removerMeio(String chassi){
         try{
-            for(Carro valor : s){
-                if(valor.getChassi().equals(c)){
-                    if(s.remove(valor)){
+            for(Carro valor : set){
+                if(valor.getChassi().equals(chassi)){
+                    if(set.remove(valor)){
                         System.out.println("Valor removido com sucesso!");
                     }break;
                 }

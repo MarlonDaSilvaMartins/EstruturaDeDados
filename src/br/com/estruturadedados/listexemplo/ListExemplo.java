@@ -20,39 +20,36 @@ import static java.util.stream.Collectors.toList;
  * */
 
 public class ListExemplo {
-    private List<Carro> al = new ArrayList<>();
+    private List<Carro> arraylist = new ArrayList<>();
 
-    private Random g = new Random();
+    private Random random = new Random();
 
     private String marca = "Fiat";
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    //private int r1, r2;
 
     public void preencher(){
         for(int i = 0; i < 1000000; i++){
-            Supplier<Integer> r1 = () -> g.nextInt(2);
-            Supplier<Integer> r2 = () -> g.nextInt(3);
-            //r1 = g.nextInt(2);
-            //r2 = g.nextInt(3);
+            Supplier<Integer> random1 = () -> random.nextInt(2);
+            Supplier<Integer> random2 = () -> random.nextInt(3);
             chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
-            Carro c = new Carro(marca, modelo[r1.get()], cor[r2.get()],chassi, data);
+            Carro carro = new Carro(marca, modelo[random1.get()], cor[random2.get()],chassi, data);
 
-            al.add(c);
+            arraylist.add(carro);
         }
     }//preencherList
 
     public void mostrar(){
-        al.forEach(c -> System.out.println(c));
+        arraylist.forEach(carro -> System.out.println(carro));
     }//mostrarList
 
-    public Carro buscar(int c){
+    public Carro buscar(int chassi){
         Carro resultado = new Carro();
         try{
-            resultado = al.get(c);
+            resultado = arraylist.get(chassi);
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
@@ -68,8 +65,8 @@ public class ListExemplo {
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            al.add(0, c);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            arraylist.add(0, carro);
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
@@ -78,8 +75,8 @@ public class ListExemplo {
 
     public void inserirMeio(int index, String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            al.add((index-1), c);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            arraylist.add((index-1), carro);
             System.out.println("Valor inserido com sucesso!");
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
@@ -88,9 +85,9 @@ public class ListExemplo {
 
     public void inserirFim(String marca, String modelo, String cor, LocalDate data){
         try{
-            chassi = ""+(al.size()+1);
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            al.add(c);
+            chassi = ""+(arraylist.size()+1);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            arraylist.add(carro);
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -101,7 +98,7 @@ public class ListExemplo {
 
     public void removerTudo(){
         try{
-            al.clear();
+            arraylist.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -112,7 +109,7 @@ public class ListExemplo {
 
     public void removerMeio(int index){
         try{
-            al.remove(index);
+            arraylist.remove(index);
             System.out.println("Valor removido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -123,10 +120,10 @@ public class ListExemplo {
 
     public void ordenarModelo(){
         try{
-            Predicate<Carro> validaModelo= c -> !c.getModelo().isEmpty();
-            Function<Carro,String> mapModelo = c -> c.getModelo();
-            Consumer<String> carroConsumer = c -> System.out.println(c);
-            al.stream()
+            Predicate<Carro> validaModelo = (Carro carro) -> !carro.getModelo().isEmpty();
+            Function<Carro,String> mapModelo = carro -> carro.getModelo();
+            Consumer<String> carroConsumer = carro -> System.out.println(carro);
+            arraylist.stream()
                     .filter(validaModelo)
                     .sorted(comparing(Carro::getModelo))
                     .map(mapModelo)
@@ -140,7 +137,7 @@ public class ListExemplo {
 
     public void ordenarLista(){
         try{
-            al.sort((c1, c2) -> c1.getCor().compareTo(c2.getCor()));
+            arraylist.sort((chassi1, chassi2) -> chassi1.getCor().compareTo(chassi2.getCor()));
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
@@ -150,8 +147,8 @@ public class ListExemplo {
     //wildcards
     public double soma(List <? extends Number> lista){
         double soma = 0;
-        for(Number n : lista){
-            soma = soma + n.doubleValue();
+        for(Number numero : lista){
+            soma = soma + numero.doubleValue();
         }
         return soma;
     }

@@ -16,37 +16,37 @@ import java.util.Random;
  * */
 
 public class MapExemplo {
-    Map<String, Carro> m = new HashMap<String, Carro>();
+    Map<String, Carro> map = new HashMap<String, Carro>();
 
-    private Random g = new Random();
+    private Random random = new Random();
 
     private String marca = "Fiat";
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    private int r1, r2;
+    private int random1, random2;
 
     public void preencher(){
         for(int i = 0; i < 1000000; i++){
-            r1 = g.nextInt(2);
-            r2 = g.nextInt(3);
+            random1 = random.nextInt(2);
+            random2 = random.nextInt(3);
             chassi = ""+(i+1);
             data = LocalDate.of(2022, 1, 10);
-            Carro c = new Carro(marca,modelo[r1],cor[r2],chassi,data);
+            Carro carro = new Carro(marca,modelo[random1],cor[random2],chassi,data);
 
-            m.put(chassi,c);
+            map.put(chassi,carro);
         }
     }//preencherList
 
     public void mostrar(){
-        System.out.println(m);
+        System.out.println(map);
     }//mostrarList
 
-    public Carro buscar(String c){
+    public Carro buscar(String chassi){
         Carro resultado = new Carro();
         try{
-            resultado = m.get(c);
+            resultado = map.get(chassi);
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
@@ -63,8 +63,8 @@ public class MapExemplo {
     public void inserirInicio(String marca, String modelo, String cor, LocalDate data){
         try{
             chassi = "1";
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            map.put(chassi,carro);
 
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
@@ -76,8 +76,8 @@ public class MapExemplo {
 
     public void inserirMeio(String marca, String modelo, String cor, String chassi,LocalDate data){
         try{
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            map.put(chassi,carro);
 
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
@@ -89,9 +89,9 @@ public class MapExemplo {
 
     public void inserirFim(String marca, String modelo, String cor,LocalDate data){
         try{
-            chassi = ""+(m.size()+1);
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            m.put(chassi,c);
+            chassi = ""+(map.size()+1);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            map.put(chassi,carro);
 
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
@@ -103,7 +103,7 @@ public class MapExemplo {
 
     public void removerTudo(){
         try{
-            m.clear();
+            map.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -114,7 +114,7 @@ public class MapExemplo {
 
     public void removerMeio(String chave){
         try{
-            m.remove(chave);
+            map.remove(chave);
             System.out.println("Valor removido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());

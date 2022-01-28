@@ -14,27 +14,27 @@ import java.util.*;
  * */
 
 public class QueueExemplo{
-    Queue<Carro> q = new LinkedList<>();
+    Queue<Carro> queue = new LinkedList<>();
 
-    private Random g = new Random();
+    private Random random = new Random();
 
     private String marca = "Fiat";
     private String[] modelo = {"Palio","Siena"};
     private String[] cor = {"Preto","Prata","Branco"};
     private String chassi;
     private LocalDate data;
-    private int r1, r2;
+    private int random1, random2;
 
     public void preencher(){
         try{
             for(int i = 0; i < 100; i++) {
-                r1 = g.nextInt(2);
-                r2 = g.nextInt(3);
+                random1 = random.nextInt(2);
+                random2 = random.nextInt(3);
                 chassi = ""+(i+1);
                 data = LocalDate.of(2022, 1, 10);
-                Carro c = new Carro(marca, modelo[r1], cor[r2], chassi,data);
+                Carro carro = new Carro(marca, modelo[random1], cor[random2], chassi,data);
 
-                q.add(c);
+                queue.add(carro);
             }
         }catch (Exception e){
             System.out.println("Erro: "+e.getMessage());
@@ -42,19 +42,19 @@ public class QueueExemplo{
     }//preencherList
 
     public void mostrar(){
-        System.out.println(q);
+        System.out.println(queue);
     }//mostrarList
 
-    public Carro buscar(String c){
-        String primeiro = q.peek().getChassi();
+    public Carro buscar(String chassi){
+        String primeiro = queue.peek().getChassi();
         Carro resultado = new Carro();
         try{
             do{
-                if(q.peek().getChassi().equals(c)){
-                    resultado = q.peek();
+                if(queue.peek().getChassi().equals(chassi)){
+                    resultado = queue.peek();
                 }
-                q.add(q.poll());
-            }while(!q.peek().getChassi().equals(primeiro));
+                queue.add(queue.poll());
+            }while(!queue.peek().getChassi().equals(primeiro));
             return resultado;
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -71,9 +71,9 @@ public class QueueExemplo{
 
     public void inserir(String marca, String modelo, String cor,LocalDate data){
         try{
-            chassi = ""+(q.size()+1);
-            Carro c = new Carro(marca,modelo,cor,chassi,data);
-            q.add(c);
+            chassi = ""+(queue.size()+1);
+            Carro carro = new Carro(marca,modelo,cor,chassi,data);
+            queue.add(carro);
             System.out.println("Valor inserido com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -84,7 +84,7 @@ public class QueueExemplo{
 
     public void removerTudo(){
         try{
-            q.clear();
+            queue.clear();
             System.out.println("Valores removidos com sucesso!");
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
@@ -95,14 +95,14 @@ public class QueueExemplo{
 
     public void removerMeio(String c){
         try{
-            String primeiro = q.peek().getChassi();
+            String primeiro = queue.peek().getChassi();
             do{
-                if(q.peek().getChassi().equals(c)){
-                    q.poll();
+                if(queue.peek().getChassi().equals(c)){
+                    queue.poll();
                     System.out.println("Valor removido com sucesso!");
                 }
-                q.add(q.poll());
-            }while (!q.peek().getChassi().equals(primeiro));
+                queue.add(queue.poll());
+            }while (!queue.peek().getChassi().equals(primeiro));
         }catch (NullPointerException n){
             System.out.println("Erro: "+n.getMessage());
         }catch (Exception e){
