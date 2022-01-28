@@ -19,7 +19,7 @@ import java.time.format.FormatStyle;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-//todo  cookies, local storage, ver pq uma estrutura é mais rapida que outra
+//todo  cookies, ver pq uma estrutura é mais rapida que outra
 public class Main {
     public static void main(String[] args){
         //long tempoInicio = System.currentTimeMillis();

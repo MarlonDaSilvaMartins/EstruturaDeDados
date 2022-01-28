@@ -114,6 +114,12 @@ https://medium.com/@fullsour/when-should-you-use-path-variable-and-query-paramet
 https://www.baeldung.com/spring-pathvariable
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Cookies
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Cookie
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Cache-Control
+
+localStorage
+https://www.w3schools.com/html/html5_webstorage.asp
+https://medium.com/jaguaribetech/dlskaddaldkslkdlskdlk-333dae8ef9b8
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
 
 
 TryCatch

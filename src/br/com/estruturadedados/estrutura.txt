@@ -129,6 +129,10 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
   local storage
   Set-Cookie: <cookie-name>=<cookie-value>
 
+  localStorage = guarda dados localmente no navegador sem tempo para expirar
+  sessionStorage = guarda dados localmente no navegador e tem duração de uma sessao
+
+
 Try Catch = utilizado para tratar exceçoes
 
 
