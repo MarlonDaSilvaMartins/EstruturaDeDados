@@ -37,7 +37,7 @@ public class Main {
         //LocalDate data = LocalDate.now();
         //list.inserirFim("Fiat","Palio","Vermelho",data);
         //System.out.println(list.buscar(56));
-        list.mostrar();
+        //list.mostrar();
 
 
         //System.out.println("tempo:"+(System.currentTimeMillis()-tempoInicio));
@@ -55,6 +55,7 @@ public class Main {
         }*/
 
         var retorno = Optional.ofNullable(list.buscar(9)).map(Carro::getChassi).orElse(null);
+        System.out.println(retorno);
 
         /*Wildcard
         List<Integer> listaInt = Arrays.asList(10,20,30,40);

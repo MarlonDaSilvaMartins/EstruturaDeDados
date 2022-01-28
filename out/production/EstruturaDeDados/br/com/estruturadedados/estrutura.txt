@@ -90,6 +90,9 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
  * Generics  = extensao que fornece em tempo de compilacao uma verificacao de type-safety de codigo
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
+ unknown
+ super
+ extends
  * Optional  = encapsular o retorno de metodos e informar se um valor esta presente ou ausente
  * Streams   = solução para processar coleções de maneira declarativa
  * API DE DATAS = LocalDate = Capturar data do sistema ou inserir data por meio de metodos
@@ -123,11 +126,17 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
         Gerenciamento de sessao = login, carrinho de compras, placar de jogos ou qualquer atividade que deva ser guardada
         Personalização          = preferencias de usuarios, temas e outras configuraçoes
         ratreamento             = registro e analise do comportamento de um usuario
+  local storage
   Set-Cookie: <cookie-name>=<cookie-value>
+
+  localStorage = guarda dados localmente no navegador sem tempo para expirar
+  sessionStorage = guarda dados localmente no navegador e tem duração de uma sessao
+
 
 Try Catch = utilizado para tratar exceçoes
 
 
-Correção = pode utilizar metodos concretos em uma interface utilizando o default
+Correção = pode utilizar metodos concretos em uma interface utilizando o default ou static
+
 
 
