@@ -88,13 +88,13 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
         Supplier  = nao aceita argumentos e retorna um resultado
         Predicate = recebe um argumento e tem um retorno boolean
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
+ * Streams   = solução para processar coleções de maneira declarativa
  * Generics  = extensao que fornece em tempo de compilacao uma verificacao de type-safety de codigo
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
  unknown
  super
  extends
  * Optional  = encapsular o retorno de metodos e informar se um valor esta presente ou ausente
- * Streams   = solução para processar coleções de maneira declarativa
  * API DE DATAS = LocalDate = Capturar data do sistema ou inserir data por meio de metodos
                   DateTimeFormatter = API utilizada para formatar datas
 
