@@ -61,7 +61,7 @@ public class ListExemplo {
                 return null;
             }
         }
-    }//buscar
+    }//buscar try with resource
 
     public void inserirInicio(String marca, String modelo, String cor, String chassi,LocalDate data){
         try{

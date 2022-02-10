@@ -89,7 +89,7 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
         Predicate = recebe um argumento e tem um retorno boolean
  * Lambda    = bloco curto de codigo que tem parametros e retorna um valor
  * Streams   = solução para processar coleções de maneira declarativa
- * Generics  = extensao que fornece em tempo de compilacao uma verificacao de type-safety de codigo
+ * Generics  = escrever metodos com uma simples tipagem +
  * Wildcards = utilizacao de <?> para remover a incompatibilidade entre diferentes instanciacoes de tipo genericos
  unknown
  super
@@ -121,6 +121,7 @@ TreeMap       // ordena os elementos de maneira natural de conforme o metodo com
         2xx = Sucesso          =
         3xx = Redirecionamento = endereço antigo aponta para o endereço novo
         4xx = Erro no cliente  = parametros invalidos, insuficientes ou endereço que nao tem nenhuma pagina
+
         5xx = Erro no servidor = banco de dados fora do ar ou erro de codigo do lado do servidor
 **Cookies = fragmento de dados que o servidor envia para o navegador, o navegador pode armazenar estes dados e enviar de volta na proxima requisição
         Gerenciamento de sessao = login, carrinho de compras, placar de jogos ou qualquer atividade que deva ser guardada
